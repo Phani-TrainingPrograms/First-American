@@ -1,0 +1,42 @@
+.NET Framework: 
+Its a technology for developing various kinds of Applications on various devices. 
+It provides a capability to build Terminal Based, Web Based, Windows Based, Mobile Based and Database Centric Applications. .NET can also be used to create Micro controller level Apps. 
+Its available in 2 flavors: .NET Framework and .NET CORE
+.NET Framework is for Windows OS primarily. Latest version is 4.5.8. 
+.NET CORE is for multiple platforms: Windows, Linux and Mac.  Latest version is .NET 7.0 but the LTS version is 6.0 as for VS 2022.
+The .NET Framework is available as platform on Windows OS by default. However for other OS, U may have to download the .NET CORE from the MS Downloads Website.
+
+C# Language:
+C# is a programming language based on C++ that is used for developing .NET Applications. The language is specifically built for .NET to develop .NET Apps. It has got features from C++, Java and Visual Basic. It tries to provide pure Object oriented programming with support of automatic memory management(Garbage Collection). It has romoved some ambiguious features of C++ and provide a clean way of writing the code. Most of the features are acquired from C++. 
+C# is easy to learn and work with it. We have APIs that can help to develop complex operations with small pieces of code. 
+The APIs are provided by the .NET Framework and C# uses them in its code. 
+
+Visual Studio: VS is the IDE for developing .NET Applications. Even though U can use VS code or any other Text editors for developing .NET Apps, VS is the most prefered one and is also most advanced one. We are working on VS 2022.
+
+Features of .NET: 
+1. .NET is designed to be platform independent and language independent. Use the software built in one language of .NET Framework inside the code created in another language.
+2.  .NET Code is executed in a 2 step process: Every language code will be compiled by its language compiler to convert the code into a deployable unit called ASSEMBLY. 
+Assembly in .NET are of 2 types: EXE or DLL. 
+This assembly will have 2 parts: MSIL code(Language independent code) and Manifest (Metadata of the IL code)
+When the App is executed, then the runtime environment of .NET called CLR(Comman Language Runtime) is made available to execute. It has a compiler called JIT(Just I-Time) Compiler that recompiles the IL code to the native code optimized to execute on the OS that the App is executing. This native code is optimized based on the Architecture of the OS it executes.(x86 or x64).
+3. .NET Apps are said to be Memory managed Applications. U dont need to worry on the memory as it automatically handles the memory of the Application. Any heap created memory will be garbage collected with perfect algorithm so that Out of memory issues dont arise.
+4. .NET Apps are designed to be Object Oriented and help in working with latest design patterns adopted in the Software development Companies. 
+5. It is supported by Microsoft and has a large comunity of developers for support on .NET Applications. The MSDN(MS developer network) helps in providing Documentation and solutions to real time issues that might arise while U program.   
+
+
+
+ 
+ 
+ 
+ 
+
+
+ 
+
+ 
+
+
+
+ 
+ 
+
