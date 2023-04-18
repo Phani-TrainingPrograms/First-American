@@ -57,3 +57,38 @@ All the data types have Wrapper Structs created in the CTS. These have functions
 - For converting a type to any other type, we can use Convert class that has static methods to convert from one type to another.
 - Certain conversions are implicit. Longer range data types can implicitly convert the lower range types. But the reverse needs a conversion. 
 
+
+### Reference Types:
+- These are the types that store the reference(Address) of the data. The data would be created in the Heap Area of the Memory and its reference will be available to the variable.
+- All Classes are of Reference types. Other examples are Delegates,  interfaces. 
+- System.Object is one important Reference type that is the base class for all types in .NET. 
+- object can internally store any kind of data as everything is object in .NET.
+- object comes with 4 important methods
+	- GetType() used to get the internal data type of the value that is stored in the object. 
+	- ToString() gets the string representation of the object. 
+	- GetHashCode() gets the Unique Id of the object. The id is created by the CLR for its identification. 
+	- Equals() that is used to define the logical Equivalence of a comparing object.     
+- object is required when we dont know the data type at compile time.
+- Major APIS of .NET which return data of different kinds would have their return type as object.
+- Internally, the object stores the value as a BOXED Value. It means the object will hide the actual data type info to the user and the data type features will be lost when U work with object.
+- BOXING is the term used in .NET for the implicit conversion of any type to object. The Reverse of BOXING is explicit conversion which U must do while reconverting the object back to its original type. 
+- The boxed value can be UNBOXED only to that same type from which it was boxed.  Else it throws InvalidCastException.
+
+### Enums
+- Enums are User defined types that are used as Named Constants. 
+- Enums internally store the values as integral types(byte, short, int and long). 
+- U refer an integral value by a name(For better readability) is what makes an Enum.
+- Enums are requried when U want the user input to be of a given range of values. 
+- Enum values by default start with 0 and increment the next value by 1. However, U can change the start value or any intermediate value if U want using code.  
+- To get info about a Enum type, we can use a Class called System.Enum that has static methods to get possible values of the enum type, and even parse the string value to the Enum type for converting string to Enum types.
+     
+### Arrays
+- Arrays are reference types in .NET. They are formally instantiated using new operator. 
+- They are not dynamic, once the array is created, U cannot modify the length of the Array.
+- However, U have APIs to copy from one array to another with UR own logic of getting arrays created dynamically. 
+- All arrays are instances of a class called System.Array.
+- With the instance, we get Properties like Length(size of the array), Rank(Dimensions of the array) and methods like GetLength which gets the length of the specified dimension if the array is multi-dimensional, Clone, CopyTo and many more. 
+- Array also has Static methods that can be used to create Array objects at runtime.   
+
+Assignments for Day 1:
+- Create an Enum for weekdays of the week and ask the User to provide the input of selected day of work to office and display the day of work.
