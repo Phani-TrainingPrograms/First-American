@@ -111,6 +111,5 @@ All the data types have Wrapper Structs created in the CTS. These have functions
 - There can be only one params type in a function. It should be last of the parameter list. It must be always pass by value.  
   
 ### Classes and Objects:
-- A Class is simply a User defined Data type that has both data(Fields) and behaviour(Functions) in it. It is a composite Data type. 
-- A Class is simply a User defined Data type that has both data(Fields) and behaviour(Functions) in it. It is a composite Data type. 
+- A Class is simply a User defined Data type that has both data(Fields) and behaviour(Functions) in it. It is a composite Data type.  
  
