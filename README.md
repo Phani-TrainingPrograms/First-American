@@ -1,7 +1,6 @@
 # First-American
 Training for First American 
-
-### .NET Framework: 
+.NET Framework: 
 Its a technology for developing various kinds of Applications on various devices. 
 It provides a capability to build Terminal Based, Web Based, Windows Based, Mobile Based and Database Centric Applications. .NET can also be used to create Micro controller level Apps. 
 Its available in 2 flavors: .NET Framework and .NET CORE
@@ -9,15 +8,14 @@ Its available in 2 flavors: .NET Framework and .NET CORE
 .NET CORE is for multiple platforms: Windows, Linux and Mac.  Latest version is .NET 7.0 but the LTS version is 6.0 as for VS 2022.
 The .NET Framework is available as platform on Windows OS by default. However for other OS, U may have to download the .NET CORE from the MS Downloads Website.
 
-### C# Language:
+C# Language:
 C# is a programming language based on C++ that is used for developing .NET Applications. The language is specifically built for .NET to develop .NET Apps. It has got features from C++, Java and Visual Basic. It tries to provide pure Object oriented programming with support of automatic memory management(Garbage Collection). It has romoved some ambiguious features of C++ and provide a clean way of writing the code. Most of the features are acquired from C++. 
 C# is easy to learn and work with it. We have APIs that can help to develop complex operations with small pieces of code. 
 The APIs are provided by the .NET Framework and C# uses them in its code. 
 
-### Visual Studio: 
-VS is the IDE for developing .NET Applications. Even though U can use VS code or any other Text editors for developing .NET Apps, VS is the most prefered one and is also most advanced one. We are working on VS 2022.
+Visual Studio: VS is the IDE for developing .NET Applications. Even though U can use VS code or any other Text editors for developing .NET Apps, VS is the most prefered one and is also most advanced one. We are working on VS 2022.
 
-## Features of .NET: 
+Features of .NET: 
 1. .NET is designed to be platform independent and language independent. Use the software built in one language of .NET Framework inside the code created in another language.
 2.  .NET Code is executed in a 2 step process: Every language code will be compiled by its language compiler to convert the code into a deployable unit called ASSEMBLY. 
 Assembly in .NET are of 2 types: EXE or DLL. 
@@ -27,7 +25,7 @@ When the App is executed, then the runtime environment of .NET called CLR(Comman
 4. .NET Apps are designed to be Object Oriented and help in working with latest design patterns adopted in the Software development Companies. 
 5. It is supported by Microsoft and has a large comunity of developers for support on .NET Applications. The MSDN(MS developer network) helps in providing Documentation and solutions to real time issues that might arise while U program.
 
-### How to develop .NET Apps in a professional manner?
+How to develop .NET Apps in a professional manner?
 1. Have Visual Studio installed. It is available at cost as well as free. The community edition of the VS is free for download.
 U can add additional Components required from the VS Installer like LINQ, WCF(Windows Communication Foundation). 
 2. Create a Solution that contains a group of UR projects. Each Solution is a group of projects and each project has a group of files that compiles to create an Assembly(Either DLL or EXE). 
@@ -55,8 +53,7 @@ All the data types have Wrapper Structs created in the CTS. These have functions
 - Every data type has a function called ToString to convert the type to String. 
 - Every Value Type comes with Parse Method to convert a string to its type.
 - For converting a type to any other type, we can use Convert class that has static methods to convert from one type to another.
-- Certain conversions are implicit. Longer range data types can implicitly convert the lower range types. But the reverse needs a conversion. 
-
+- Certain conversions are implicit. Longer range data types can implicitly convert the lower range types. But the reverse needs a conversion.   
 
 ### Reference Types:
 - These are the types that store the reference(Address) of the data. The data would be created in the Heap Area of the Memory and its reference will be available to the variable.
@@ -88,7 +85,32 @@ All the data types have Wrapper Structs created in the CTS. These have functions
 - However, U have APIs to copy from one array to another with UR own logic of getting arrays created dynamically. 
 - All arrays are instances of a class called System.Array.
 - With the instance, we get Properties like Length(size of the array), Rank(Dimensions of the array) and methods like GetLength which gets the length of the specified dimension if the array is multi-dimensional, Clone, CopyTo and many more. 
-- Array also has Static methods that can be used to create Array objects at runtime.   
-
-Assignments for Day 1:
+- Array also has Static methods that can be used to create Array objects at runtime.
+- U can create Single dimensional and multi dimensional Arrays.
+- U can also array of arrays called as JAGGED Arrays. U can create an array of classrooms where each room has a array of students in it.      
+# Assignments for Day 1:
 - Create an Enum for weekdays of the week and ask the User to provide the input of selected day of work to office and display the day of work.
+
+### Functions in C#
+- Functions are blocks of code that perform an operation that is to be done repeatedly across the Application at various points. 
+- As C# is OOP, we have to create functions within the class only. U cannot have global functions in C# as of C#7.0 version.
+- The functions could be invoked either by the instance of the class or by the ClassName. Functions invokable thru the instance are called as NonStatic or Instance based functions. Functions that are invoked by the Name of the class are called as Static functions. 
+- We create static functions if we are using the function quite frequently in the Application so that U dont need an instance of the class.  
+- Within Static function, U can call instance functions only thru object instances. 
+- Static Functions must be called using the classname only, Unlike C++ and Java, U cannot call Static functions thru class instances. 
+- Static functions are also created as Helper functions within an Application to break down complex tasks into smaller tasks.
+
+### Parameters within Functions
+- parameters are dependencies injected into a function to allow it to perform the functionality.
+- By default, parameters are passed by value in C# Functions. 
+	- The parameter value changes that are made in the function are not reflected outside the function.
+- To give back the modified value, we use return types for the functions. A Function can have only one return type. 
+- Sometimes, U may have to return multiple values for a given function call. This can be done by Pass By Reference, Pass By Out parameters in C#. ref and out are the keywords that define the ref and out parameters in C#.  
+- ref and out are very similar in their functionality except that ref parameters are intialized before sending to the function. out parameters must be set with a value before exiting the function. 
+- If U want the caller of the function to pass any no of arguements, U can use params.
+- There can be only one params type in a function. It should be last of the parameter list. It must be always pass by value.  
+  
+### Classes and Objects:
+- A Class is simply a User defined Data type that has both data(Fields) and behaviour(Functions) in it. It is a composite Data type. 
+- A Class is simply a User defined Data type that has both data(Fields) and behaviour(Functions) in it. It is a composite Data type. 
+ 
