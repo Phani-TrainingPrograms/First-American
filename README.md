@@ -88,7 +88,7 @@ All the data types have Wrapper Structs created in the CTS. These have functions
 - Array also has Static methods that can be used to create Array objects at runtime.
 - U can create Single dimensional and multi dimensional Arrays.
 - U can also array of arrays called as JAGGED Arrays. U can create an array of classrooms where each room has a array of students in it.      
-# Assignments for Day 1:
+#### Assignments for Day 1:
 - Create an Enum for weekdays of the week and ask the User to provide the input of selected day of work to office and display the day of work.
 
 ### Functions in C#
