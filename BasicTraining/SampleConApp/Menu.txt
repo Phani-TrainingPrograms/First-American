@@ -1,0 +1,6 @@
+﻿---------------EXPENSE MANAGER SOFTWARE v1.O----------------------
+TO ADD NEW EXPENSE------------>PRESS N
+TO DELETE AN EXPENSE---------->PRESS D
+TO FIND EXPENSES-------------->PRESS F
+TO UPDATE EXPENSES------------>PRESS U
+PS: ANY OTHER KEY IS CONSIDERED AS EXIT...........................
