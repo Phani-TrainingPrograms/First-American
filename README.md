@@ -110,6 +110,25 @@ All the data types have Wrapper Structs created in the CTS. These have functions
 - If U want the caller of the function to pass any no of arguements, U can use params.
 - There can be only one params type in a function. It should be last of the parameter list. It must be always pass by value.  
   
+  
 ### Classes and Objects:
-- A Class is simply a User defined Data type that has both data(Fields) and behaviour(Functions) in it. It is a composite Data type.  
+- A Class is simply a User defined Data type that has both data(Fields) and behaviour(Functions) in it. It is a composite Data type.
+- Classes are to be defined before using them. The Defining means that what the class contain, what functionalities that it pocesses to be consumed and many more. 
+- A Class can contain fields, functions, events and properties. Classes can also be nested. But its scope is very limited. 
+- Fields of a class are usually private. It means that they are accessible only within the class definition. U cannot refer them outside the class. This feature is called Encapsulation where the class secures the data by not allowing others to access it. 
+- We use Functions to manipulate the data. Functions can be private or public. public implies that the methods are accessible any where in the program by using the object of the class.
+- Old C/C++ programs had Getter/Setter Functions to provide access to the private data. However in C#, ue can use Properties which are Accessors to the private data. 
+- Properties are internally blocks to get/set the private data. U can provide any business contraints so as to provide appropriate data required for UR business.
+- New in C# 4.0, we have Automatic Properties where U dont need to create seperate private data, the hidden data will be provided by the .NET itself, U just have to create properties. The properties can also be accessed while creating the object using a new syntax called object initialization syntax. 
+- Once the class is defined, we create objects of the class and consume the properties or access the methods using the object. Ofcourse, if U have static methods, U dont need an object for accessing it.
+- Use old style properties if U want to have business rules to be implemented for the data, else U can go for new Property syntax where U just properties as accessors to the hidden data. 
+
+
+### SOLID Principles:
+- OOP designing is done based on the principles of the OOP called SOLID
+- Single Responsibility Principle: A class should do only one JOB. Dont mix the UI interaction with the Business Logic and Business Logic with Data Storage. 
+- Open Closed Principle: A class is immutable. Once created, it is closed for modification, but is open for Extension. This leads to concept of Inheritance feature in OOP. 
+- Luskov's Substitution Principle: A Base type can be substituted by any of the derived types in the program as long as it does not alter the signature of the Function. 
+- Interface Segregation Principle: It is better to have specfic interfaces rather than having large interface with multiple operations in it. 
+- Dependency Inversion Principle: It is better to depend on abstractness rather than concreteness while defining functions within UR program. 
  
