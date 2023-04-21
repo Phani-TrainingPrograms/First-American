@@ -131,4 +131,53 @@ All the data types have Wrapper Structs created in the CTS. These have functions
 - Luskov's Substitution Principle: A Base type can be substituted by any of the derived types in the program as long as it does not alter the signature of the Function. 
 - Interface Segregation Principle: It is better to have specfic interfaces rather than having large interface with multiple operations in it. 
 - Dependency Inversion Principle: It is better to depend on abstractness rather than concreteness while defining functions within UR program. 
- 
+
+
+### SOLID Principles:
+- OOP designing is done based on the principles of the OOP called SOLID
+- Single Responsibility Principle: A class should do only one JOB. Dont mix the UI interaction with the Business Logic and Business Logic with Data Storage. 
+- Open Closed Principle: A class is immutable. Once created, it is closed for modification, but is open for Extension. This leads to concept of Inheritance feature in OOP. 
+- Luskov's Substitution Principle: A Base type can be substituted by any of the derived types in the program as long as it does not alter the signature of the Function. 
+- Interface Segregation Principle: It is better to have specfic interfaces rather than having large interface with multiple operations in it. 
+- Dependency Inversion Principle: It is better to depend on abstractness rather than concreteness while defining functions within UR program. 
+
+### Inheritance:
+- Inheritance is a feature of OOP where we can extend our classes without altering the signatures of the existing classes. The Class which is being extended is called as BASE/PARENT/SUPER class. The class that is extending is called as DERIVED/CHILD/SUB Class. 
+- Inheritance is based on the principle of OOP called Open Closed Principle. A Class is closed for modification(IMMUTABLE) but is open for extension. 
+- Inheritance in C# is Single Inheritance. UR class can have only one base class at any level. Only C++ supports multiple Inheritance. The concept creates lots of ambiguities, so it is discarded in the newer OOP languages like Java and C#. 
+- C# supports Multi level Inheritance which could give U the feel of multiple inheritance in a more safer manner.
+
+### Method Overriding
+- A Class is immutable. However U can extend it. 
+- If a method needs to be modified by the derived class, then U must go thru a feature called Method overriding. 
+- The Base class should provide permissions for the derived classes to modify the methods. The method that is intended to be modified by the derived classes should be marked with a modifier called virtual. Only virtual methods can be modified in the derived classes. 
+- The derived class can modify the methods by redefining the methods using a modifier called override.
+- override can be done on those methods that are marked as virtual, override or abstract in its base class declarations.  
+
+### Abstract classes:
+- Classes that contain atleast one method that is not implemented by the class. These methods are intended to be implemented by the derived classes. 
+- Non implemented method should be marked as abstract and the class becomes an abstract class. U should use abstract modifier at the class level as well as method level. 
+- Abstract classes are incomplete classes, so they cannot be instantiated.
+- Abstract class object can be instantiated to any of the derived classes and then consumed. 
+- The classes that inherit from the abstract class must implement all the abstract methods, else even the derived class becomes abstract.
+
+### Interfaces:
+- Interfaces are like Abstract classes but will have only abstract methods in them.
+- Interfaces cannot have implementations. Interfaces cannot have fields, however they can have properties. Interface members are always public. U dont mention the access specifier for the Interface methods
+- A class can implement multiple interfaces at the same level. The class that implements the interface must implement all the methods of the interface with public scope. With this, the class guarantees(Like A contract) that the methods of the interface are implemented and is available at public scope.
+- All interfaces are prefixed with I in C#. We dont have implements keyword, the implementation syntax is similar to Derivation Syntax 
+-Interfaces can be implemented in 2 ways: Implicitly and Explicitly. Explicit Implementation would help in resolving naming conflicts for methods with same signature but provided by different interfaces.
+- Interfaces are the most widely used OOP feature for developing Applications at all levels. 
+
+### Method Hiding
+- Methods that are not virtual can be modified by the derived classes. 
+- In this case, the methods hide the implementation of the Base class. 
+- They are not polymorphic and the methods invoked thru Base class objects will not recognize the newly implemented methods. 
+- Use the new keyword for the derived class implementation if the new implementation is intended. It simply removes the warning on the method. However, it still retains the same functionality. One must avoid Method hiding as much as possible as its not a good practise of implementing OOP Features.
+
+### Sealed Classes:
+- If U have classes that U dont intend to extend, they can be marked with decorator sealed to make it non inheritable. 
+- Sealed class methods cannot have abstract, virtual methods. However they can have override methods. 
+- Examples of Sealed classes are string. 
+- U can create Sealed methods for overridable methods, so that intension is to make the methods that are being overriden be sealed and dont want to override further.  The chain will stop. sealed methods have 2 modifiers sealed along with override. In other words, only overriden methods can be sealed. 
+
