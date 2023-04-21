@@ -180,4 +180,9 @@ All the data types have Wrapper Structs created in the CTS. These have functions
 - Sealed class methods cannot have abstract, virtual methods. However they can have override methods. 
 - Examples of Sealed classes are string. 
 - U can create Sealed methods for overridable methods, so that intension is to make the methods that are being overriden be sealed and dont want to override further.  The chain will stop. sealed methods have 2 modifiers sealed along with override. In other words, only overriden methods can be sealed. 
-
+### Constructors
+- Constructors are sp functions created to inject the dependencies required for the object to be usable.
+- Constructor with no args is called as DEFAULT Constructor. 
+- Constructors can be parameterised. Any dependencies for the class is injected using the parameters of the Constructor. 
+- Constructors follow a hierarchy chain while creating the object. If the current class has a base class, then the base class's default constructor will be called. However, if the base class has constructors being OVERLOADED, U can specify which constructor to call by invoking the base class constructor explicitly using base keyword. 
+- If the base class has only parameterised constructor, then it is the responsibility of the derived class to explicitly invoke the base class constructor from its contructor using base keyword. 
