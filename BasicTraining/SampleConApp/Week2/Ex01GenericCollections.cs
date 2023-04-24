@@ -10,7 +10,31 @@ namespace SampleConApp.Week2
             //listExample();
             //employeeListExample();
             //hashsetExample();
-            employeeHashSetExample();
+            //employeeHashSetExample();
+            //dictionaryExample();
+        }
+
+        private static void dictionaryExample()
+        {
+            Dictionary<string, string> data = new Dictionary<string, string>();
+            //U can add elements in 2 ways:
+            data["Sample"] = "Example";//Key is Sample, Value is Example. If the key is not available, it will add the key and the associated value into the collection. If the Key exists, it updates the value. 
+
+            data.Add("Test", "Code");//Add method adds a new key- value pair, if the key exists, it throws ArguementExceptions as Key already exists...
+            if (data.ContainsKey("Test"))
+            {
+                Console.WriteLine("Test already exists");
+            }
+            else{
+                data["Test"] = "SomeOtherValue";
+            }
+
+            ///Foreach loop and 
+            foreach(KeyValuePair<string, string> pair in data)
+            {
+                Console.Write("The Key: " + pair.Key);
+                Console.WriteLine("The Value: " + pair.Value);
+            }
         }
 
         private static Employee createEmployee()
@@ -41,7 +65,7 @@ namespace SampleConApp.Week2
                 }
             } while (true);
             
-            Console.WriteLine("The Total employees with us: " + uniqueTeam.Count);
+            //Console.WriteLine("The Total employees with us: " + uniqueTeam.Count);
 
         }
 
