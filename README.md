@@ -180,9 +180,35 @@ All the data types have Wrapper Structs created in the CTS. These have functions
 - Sealed class methods cannot have abstract, virtual methods. However they can have override methods. 
 - Examples of Sealed classes are string. 
 - U can create Sealed methods for overridable methods, so that intension is to make the methods that are being overriden be sealed and dont want to override further.  The chain will stop. sealed methods have 2 modifiers sealed along with override. In other words, only overriden methods can be sealed. 
+
 ### Constructors
 - Constructors are sp functions created to inject the dependencies required for the object to be usable.
 - Constructor with no args is called as DEFAULT Constructor. 
 - Constructors can be parameterised. Any dependencies for the class is injected using the parameters of the Constructor. 
 - Constructors follow a hierarchy chain while creating the object. If the current class has a base class, then the base class's default constructor will be called. However, if the base class has constructors being OVERLOADED, U can specify which constructor to call by invoking the base class constructor explicitly using base keyword. 
 - If the base class has only parameterised constructor, then it is the responsibility of the derived class to explicitly invoke the base class constructor from its contructor using base keyword. 
+
+### Exception handling
+- Exceptions are abnormal termination when an App fails to take it forward because of a wrong input, or a condition where the Application cannot be taken forward.
+- Exceptions in C# are object oriented classes. Any Exception is raised using an object of a class derived from System.Exception. 
+- throw keyword is used to raise an Exception in the code. 
+- Exceptions are handled using try....catch...finally. The code can have a try block followed by catch or finally or both.
+- try block can have multiple catch blocks but only one finally block. try blocks can be nested.
+- If a code raises an Exception, first it checks within the executing block whether the Exception can be handled or not. If not found, it raises to the caller of the function, if not found there it continues its funnelling of the Block until it reaches the Main function. Even if the Main does not have the Exception Handling code, the Application will terminate with the Error code of a -ve no. 
+
+# Week 2
+## Frameworks
+### Collections Framework
+- Collections provide a set of classes and interfaces that will resolve the limitations of Arrays. 
+- Collections are available in 2 flavors: Generic and Non Generic. 
+- Non Generic is the old version and is almost replaced by Generic Version.
+- Non Generic collections store the data in the form of objects. They are slow as BOXING and UNBOXING was required while storing and reading the data respectively. They store the data as objects, there could be a possibility of storing data of multiple data types within the collection and would not be typesafe.
+- The namespace for Non Generic collections is System.Collections
+- Important classes: ArrayList, HashTable, Stack, Queue. 
+- Even though Generic Collections are used widely, they are internally inherited or implementing the interfaces of the Non Generic Collection Classes. 
+- Generic collections are typesafe as they store the specific kind of data in it. The data type is determined at compile time so that U can insert/remove only the data of that specific type.  There is no scope of BOXING/UNBOXING in Generic Collections. Its faster and easy to maintain. Generic collections came into the .NET from .NET v2.0(2005)
+- List<T> is a generic class that works like Array but with additional features to add/remove elements within the collection even after creating it. It has methods to add, insert, remove, removeat and Properties like Count to get the size of the elements and many more. List<T> implements IList<T> interface which internally derives from ICollection<T> and so forth
+- List<T>--->IList<T>---->ICollection<T>---->IEnumerable<T>--->IEnumerable
+- HashSet<T> is a data structure similar to List<T> but will store unique values in it. List<T> has a limitation of storing duplicate values. With HashSet<T>, U can resolve it, hashset works very similar to List<T>. 
+- When a new object is created, the CLR will create unique ID for the object. This is called as HashCode. HashSet checks for HashCode to see if they are the same objects. If the hashcode of 2 objects are same, then the Hashset looks for the logical equivalence of those 2 objects which is defined in the Equals method of the object. After this, the Hashset determines whether the object is same or different. 
+ 
