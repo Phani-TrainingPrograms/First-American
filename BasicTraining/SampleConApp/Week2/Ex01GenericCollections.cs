@@ -12,6 +12,12 @@ namespace SampleConApp.Week2
             //hashsetExample();
             //employeeHashSetExample();
             //dictionaryExample();
+            Utilities.Display("List", listExample);
+            Utilities.Display("ListOfObjects", employeeListExample);
+            Utilities.Display("HashSet", hashsetExample);
+            Utilities.Display("HashSet On Employees", employeeHashSetExample);
+            //Utilities.Display("List", listExample);
+
         }
 
         private static void dictionaryExample()

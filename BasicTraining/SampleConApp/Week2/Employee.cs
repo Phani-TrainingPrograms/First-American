@@ -41,7 +41,8 @@ namespace SampleConApp.Week2
             }
         }
     }
-    class Employee
+    [Serializable]//For Binary Serialization......
+    public class Employee
     {
         public DateTime EmpDob { get; set; }
         public double EmpSalary { get; set; }

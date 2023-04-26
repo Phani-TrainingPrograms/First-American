@@ -1,0 +1,4 @@
+﻿``````````````````EMPLOYEE MANAGEMENT SOFTWARE``````````````````
+TO ADD NEW EMPLOYEE--------->PRESS 1
+TO DISPLAY ALL EMPLOYEES---->PRESS 2
+PS: ANY OTHER NUMBER IS CONSIDERED AS EXIT........................
