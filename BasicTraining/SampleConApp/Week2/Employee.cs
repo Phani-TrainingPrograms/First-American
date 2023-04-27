@@ -42,7 +42,7 @@ namespace SampleConApp.Week2
         }
     }
     [Serializable]//For Binary Serialization......
-    public class Employee
+    public class Employee//For Xml and Soap, the class should be public. 
     {
         public DateTime EmpDob { get; set; }
         public double EmpSalary { get; set; }

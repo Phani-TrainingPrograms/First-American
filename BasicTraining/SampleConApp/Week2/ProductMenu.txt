@@ -1,0 +1,7 @@
+﻿---------------PRODUCT MANAGER--------------------------------------
+TO ADD NEW PRODUCT------------------> PRESS N
+TO DELETE OLD PRODUCT---------------> PRESS D
+TO UPDATE PRODUCT-------------------> PRESS U
+TO FIND PRODUCT---------------------> PRESS F
+TO EXIT THE APP---------------------> PRESS X
+--------------------------------------------------------------------

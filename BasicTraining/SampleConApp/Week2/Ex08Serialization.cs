@@ -18,14 +18,24 @@ namespace SampleConApp.Week2
 
     class SoapSerialization : ISerialization
     {
+        const string fileName = "SoapEmployees.xml";
         public List<Employee> LoadData()
         {
-            throw new NotImplementedException();
+            SoapFormatter fm = new SoapFormatter();
+            FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+            var data = fm.Deserialize(fs) as Employee[];
+            fs.Close();
+            return data.ToList();
         }
 
         public void SaveData(List<Employee> employees)
         {
-            
+            var dataToSerialize = employees.ToArray();//WHAT
+            SoapFormatter formatter = new SoapFormatter();//HOW
+            FileStream location = new FileStream(fileName, FileMode.OpenOrCreate, FileAccess.Write);
+            formatter.Serialize(location, dataToSerialize);
+            location.Close();//Stream should be closed for other part of the Application to read it....
+            Console.WriteLine("Data is serialized as Soap");
         }
     }
     class BinarySerialization : ISerialization
@@ -89,7 +99,7 @@ namespace SampleConApp.Week2
                 case Format.Xml:
                     return new XmlSerialization();
                 case Format.Soap:
-                    break;
+                    return new SoapSerialization();
                 case Format.Json:
                     break;
                 default:
@@ -103,13 +113,13 @@ namespace SampleConApp.Week2
     {
         static void Main(string[] args)
         {
-            //List<Employee> data = readCSVFile();
+            List<Employee> data = readCSVFile();
 
-            ISerialization component = EmployeeFactory.GetObject(Format.Xml);
-            //component.SaveData(data);
-            var data = component.LoadData();
-            foreach (var emp in data) 
-                Console.WriteLine($"{emp.EmpName} - {emp.EmpEmail}");
+            ISerialization component = EmployeeFactory.GetObject(Format.Soap);
+            component.SaveData(data);
+            //var data = component.LoadData();
+            //foreach (var emp in data) 
+              //  Console.WriteLine($"{emp.EmpName} - {emp.EmpEmail}");
         }
 
         private static List<Employee> readCSVFile()

@@ -17,9 +17,10 @@
 ### Copy Files from Source to Destination
 - Create a Program that copies the PDF files of one directory into new Directory selected by the User and paste all the pdf files in the new directory created.
 
-### Implement the Soap Serialization
-- Create the Implementor class for the ISerialization Interface using Soap Serialization. 
-- Make appropriate changes in the Factory method and the Main method to make the component work polymorphically on Soap Serialization.
+### Implement the JSON Serialization
+- Create the Implementor class for the ISerialization Interface using Json Serialization. 
+- Make appropriate changes in the Factory method and the Main method to make the component work polymorphically on Json Serialization.
+TIP: Use a Nuget Package called Newtonsoft.Json. 
 
 
 
