@@ -262,7 +262,19 @@ All the data types have Wrapper Structs created in the CTS. These have functions
 - For Xml Serialization: System.Xml.Serialization;
 - For SOAP :  System.Runtime.Serialization.Formatters.SOAP
 - For JSON : NewtonSoft.Json.Serialization.(External Library)
-- For Binary Serialization, the Class of the object that U want to serialize should be having an attribute called [Serializable]. This attribute adds some abstract logic to make the objects of this class Serializable. 
+- For Binary Serialization, the Class of the object that U want to serialize should be having an attribute called [Serializable]. This attribute adds some abstract logic to make the objects of this class Serializable.
+- For Xml and Soap Serialization, the class should be public, the Serializable attribute need not be placed.
+-Use Xml and Soap for cross platform data sharing and binary serialization for Windows specific data sharing. 
+
+### Dll Programming:
+- Dll means a pre compiled Unit that can be used in a language independent manner across multiple projects.
+- Dlls are files saved as .dll. They are created to make the Projects more modular and maintainable. Making Dlls will reduce the size of the EXE and dlls are loaded at runtime when the Exe begins. 
+- Dlls are not executables, they are consumed by Executables.
+- Class Library Project template should be used for creating Dlls.
+- Classes created in the DLL projects should be public, else they will be internal to the project itself. If internal, the class is non-accessible in other projects. 
+- It is good to create an Application with Dlls rather than have one big monolithic Application which is big is size. 
+- Once the Dll project is built, U can consume the DLL in other projects. If the DLL project is in the same soln of the Exe Project, then U can reference the dll from the Project Tab of the Add Reference Dialog. If the Dll project does not exist in the soln, U can refer the dll by browsing the Dll location. 
+- After adding the reference, U should use the namespace of the class that U want to consume and work with it as if its your own class. 
 
 
 
