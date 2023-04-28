@@ -103,4 +103,6 @@ Select Count(tblEmployee.EmpId) as EmpCount, tblEmployee.EmpSalary from tblEmplo
 Having EmpSalary between 50000 and 75000
 
 --Get the Employees whose Salary is greater than the Avg Salary of his Dept.
- 
+ Select EmpName, EmpSalary From tblEmployee Where EmpSalary > (Select Avg(EmpSalary), DeptName From tblEmployee RIGHT JOIN tblDept On tblEmployee.DeptId = tblDept.DeptId 
+	group by DeptName)
+	
