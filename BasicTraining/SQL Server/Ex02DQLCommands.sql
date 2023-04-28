@@ -80,3 +80,27 @@ RIGHT JOIN tblCity ON tblEmployee.CityId = tblCity.CityId
 -----------Get the Cityname and the max salary for each city using GROUP BY CLAUSE...
 Select tblCity.CityName, MAX(tblEmployee.EmpSalary) as MaxSalary from tblEmployee RIGHT JOIN tblCity ON tblCity.CityId = tblEmployee.CityId
 GROUP BY tblCity.CityName 
+
+--Getting the EmpName, DeptName and CityName for each Employee
+Select tblEmployee.EmpName, tblDept.DeptName, tblCity.CityName
+from tblEmployee RIGHT JOIN tblDept
+ON tblEmployee.DeptId = tblDept.DeptId
+RIGHT JOIN tblCity ON tblEmployee.CityId = tblCity.CityId
+
+--Get the EmpName who has the Max salary from each Dept and city from where he comes from. 
+
+--Get the EmpCount of each dept. 
+Select tblDept.DeptName, COUNT(tblEmployee.EmpId) as EmpCount
+From tblEmployee RIGHT JOIN tblDept
+ON tblEmployee.DeptId = tblDept.DeptId
+GROUP BY tblDept.DeptName
+ORDER BY EmpCount DESC
+
+--Get the Total Salaries of each Dept.
+
+--Get the Employee Count of the Employees based on Salary which comes b/w 50000 to 75000
+Select Count(tblEmployee.EmpId) as EmpCount, tblEmployee.EmpSalary from tblEmployee Group by EmpSalary
+Having EmpSalary between 50000 and 75000
+
+--Get the Employees whose Salary is greater than the Avg Salary of his Dept.
+ 
