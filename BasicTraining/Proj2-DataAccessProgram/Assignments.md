@@ -1,0 +1,12 @@
+# Database Programming assignment
+- Create a Console Application that performs Database Operations using ADO.NET Connected Data Access Model.
+- Let there be a table called tblCustomer with Id, Name, Address, Phone, BillAmount and BillDate as Columns. 
+- Create an interface with all the CRUD functions that will be implemented by a Class. 
+- The APIs required are as follows:
+    - Function to get the Customer based on PhoneNo
+    - Function to get the Customer from a given City
+    - Function to add, remove and update Customer details
+    - Function to find the Customer by giving partial Names. 
+- Let there be a Menu driven App from the Console that calls the APIs and acts as User interface of the Application. 
+- Convert the interface and the Implementor class as a DLL and consume it in the Main program. 
+- 
