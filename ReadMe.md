@@ -282,7 +282,7 @@ All the data types have Wrapper Structs created in the CTS. These have functions
 - ADO.NET uses Connected and Disconnected model for database interactions.
 - Connected Model is where we make an exclusive connectivity to the database, perform the relevant operations and close the connection after the work. 
 - Important Classes: SqlConnection, SqlCommand and SqlDataReader. The classes are avaiable under System.Data.SqlClient namespace and the DLL is System.Data. 
-- SqlConnection has ConnectionString property that is used to set the info related to the Connectivty of the Database, in our case SQL server. Its Open and Close methods are used to Open and Close the Database Connectivity.
+- SqlConnection has ConnectionString property that is used to set the info related to the Connectivty of the Database, in our case SQL server. Its Open and Close methods are used to Open and Close the Database Connectivity. Its State property is used to get the connectivity Status of the Connection like Open, Closed, Broken and so forth. 
 - SqlCommand Class represents the Queries that U make to the database. It has an association relation with the Connection Class using Connection property. The CommandText property is used to set the SQL Statement to execute. The CommandType Property is used to mention the Stored Procedure if we are using Stored Procedure to execute the Statement, in this case, the CommandText would contain the Name of the Stored Proc that we want to execute. 
 - The SqlCommand class has 3 ways to execute the SQL statement
 	- ExecuteNonQuery -> For Insert, Delete and Update Statements
