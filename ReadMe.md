@@ -276,7 +276,21 @@ All the data types have Wrapper Structs created in the CTS. These have functions
 - Once the Dll project is built, U can consume the DLL in other projects. If the DLL project is in the same soln of the Exe Project, then U can reference the dll from the Project Tab of the Add Reference Dialog. If the Dll project does not exist in the soln, U can refer the dll by browsing the Dll location. 
 - After adding the reference, U should use the namespace of the class that U want to consume and work with it as if its your own class. 
 
-
+## ADO.NET
+### Connected Model
+- ADO.NET is the data access Model for all .NET Applications. There are other frameworks like LINQ and Entity Framework that will covered later.
+- ADO.NET uses Connected and Disconnected model for database interactions.
+- Connected Model is where we make an exclusive connectivity to the database, perform the relevant operations and close the connection after the work. 
+- Important Classes: SqlConnection, SqlCommand and SqlDataReader. The classes are avaiable under System.Data.SqlClient namespace and the DLL is System.Data. 
+- SqlConnection has ConnectionString property that is used to set the info related to the Connectivty of the Database, in our case SQL server. Its Open and Close methods are used to Open and Close the Database Connectivity.
+- SqlCommand Class represents the Queries that U make to the database. It has an association relation with the Connection Class using Connection property. The CommandText property is used to set the SQL Statement to execute. The CommandType Property is used to mention the Stored Procedure if we are using Stored Procedure to execute the Statement, in this case, the CommandText would contain the Name of the Stored Proc that we want to execute. 
+- The SqlCommand class has 3 ways to execute the SQL statement
+	- ExecuteNonQuery -> For Insert, Delete and Update Statements
+	- ExecuteReader -> For SELECT statements where we get a reader object thru which we read the data extracted from the SELECT
+	- ExecuteScalar -> For Single values retrieved from the Database like Scalar Values.
+- The SqlCommand also has Parameters Collection that is used to set parameters to the Stored procedure or to the Statement that U use. It has a property called Parameters of the type SqlParameters Collection which has methods like AddWithValue to set the name and the value for the parameters to the Query. 
+- SqlDataReader object is used to read the Data in a forward only and Read only manner. Its Read method is used to move the Cursor of the Data to the next while reading the Current record. 
+	
 
 
 
