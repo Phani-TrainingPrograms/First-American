@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./Classes.js"></script>
+    <link rel="stylesheet" href="mainStyle.css">
+    <title>Class and Object</title>
+</head>
+<body>
+    <script>
+        //3 ways to create classes in JS. Singleton objects, Function classes and the new ES6 Syntax using class keyword.
+        function singletonObjectExample(){
+            const cst = { cstId : 123, cstName : "Phaniraj", cstAddress : "Bangalore"};
+            cst.cstEmail = 'phanirajbn@gmail.com';//Adding new property to the same object. As its singleton, U can add or remove the properties of the object. 
+            cst.display = function(){//Adding method to the object.
+                return `${cst.cstName}`
+            }
+            const emp = {};
+            emp.empId = 123;
+            emp.empName = "Phaniraj"
+            emp.empAddress = "Bangalore";
+            for (const key in cst) {
+                    console.log(`Key: ${key} ---- Value: ${cst[key]}`);
+                }
+            console.log(cst.display());
+            const empCopy = emp;
+            empCopy.empName = "Omkar";
+            console.log(emp);
+        }
+        
+        //singletonObjectExample();
+
+        function onFunctionObject(){
+            const id = $("txtId").value;
+            const name = $("txtName").value;
+            const address = $("txtAddress").value;
+            const salary = $("txtSalary").value;
+            const obj = new Employee(id, name, address, salary);
+            obj.display();
+            $("pDisplay").innerText = `The Name is ${obj.name} from ${obj.address} earning a salary of Rs. ${obj.salary}`
+        }
+    </script>
+    <!--
+        TODO: Take inputs from the user using Input boxes and create the object and display the data in a <p> Tag. 
+    -->
+    <button onclick="onFunctionObject()">Display Data</button>
+
+    <div class="card">
+        <h2>Employee Object</h2>
+        <input type="text" id="txtId" placeholder="Employee Id">
+        <input type="text" id="txtName" placeholder="Employee Name">
+        <input type="text" id="txtAddress" placeholder="Employee Address">
+        <input type="text" id="txtSalary" placeholder="Employee Salary">
+        <button onclick="onFunctionObject()">Display</button>
+    </div>
+    <div class="card">
+        <p id="pDisplay"/>  
+        
+    </div>
+</body>
+</html>

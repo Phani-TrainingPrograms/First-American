@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data types example</title>
+</head>
+<body>
+    <script>
+        //Js is a dynamic language, so no data types are defined. Everything is var in JS. Its new variations have come up in version 6 with keywords const and let. 
+        //let is more scope based compared to var. 
+        //const is used for storing data that does not alter. 
+        let fruitName = "Apple" //string
+        let age = 46 //number
+        let currDate = new Date(); //object
+        let boolExp = true;//boolean
+        let obj = { EmpId : 123, Empname: "Phaniraj" };//object.
+
+        //The internal data type of the variable can be found using typeof operator
+        var data; //U have a variable with no initialization. 
+        let value = null;
+        console.log(typeof(fruitName));
+        console.log(typeof(age));
+        console.log(typeof(currDate));
+        console.log(typeof(boolExp));
+        console.log(typeof(obj));
+        console.log(typeof(data));
+        console.log(typeof(value)); //null is an object that has no memory
+
+        //parseInt and parseFloat is used to convert string to int or float respectively. 
+        let value1 = parseFloat( prompt("Enter the First value"));
+        if(isNaN(value1)){
+            alert("It is not a valid Input")
+            
+        }
+        let value2 = parseFloat(prompt("Enter the Second value")); 
+        if(isNaN(value2)){
+            alert("It is not a valid Input")
+            
+        }
+        let operand = prompt("Enter the Operation as + , - , * or /");
+        switch(operand){
+            case "+" : alert("The Added value: " + (value1 + value2)); break;
+            case "-" : alert("The Subtracted value: " + (value1 - value2)); break;
+            case "*" : alert("The Product : " + (value1 * value2)); break;
+            case "/" : alert("The Divided: " + (value1 / value2)); break;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mainStyle.css">
+    <title>Arrays Example</title>
+    <script>
+        let example = [];//Blank Array in JS...Arrays are dynamic in nature. 
+        function update(item){
+            const updatingValue = document.getElementById("txtInput").value;
+            for (let index = 0; index < example.length; index++) {
+                if(example[index] == item){
+                    example.splice(index, 1, updatingValue);
+                    break;
+                }               
+            }
+            showItems();
+        }
+        function remove(item){
+            const selectedIndex = example.indexOf(item);
+            if(selectedIndex < 0){
+                alert("Invalid Selection");
+                return;
+            }
+            example.splice(selectedIndex, 1);
+            showItems();
+        }
+        function showItems(){
+            //foreach statement of JS
+            let list = document.getElementById("ulItems");
+            list.innerHTML = "";
+            for (const item of example) {
+                list.innerHTML += `<li>${item} <a href="#" onclick="remove('${item}')">Remove</a><a href="#" onclick="update('${item}')">Update</a></li>` 
+            }
+        }
+        function onAddItem(){
+            const val = document.getElementById("txtInput").value;
+            example.push(val);//Adds the value to the bottom of the array..
+            showItems(); 
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>Arrays in JS</h1>
+    <div class="card">
+        <input id="txtInput" placeholder="Enter a value to add"/>
+        <button onclick="onAddItem()">Add Item</button>
+    </div>
+    <div class="card">
+        <h2>List of Items added</h2>
+        <ul id="ulItems"></ul>
+    </div>
+</body>
+</html>

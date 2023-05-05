@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc Program</title>
+    <link rel="stylesheet" href="mainStyle.css">
+    <script src="./Functions.js"></script>
+    <script>
+        function onClick(){
+            //get the first value, secondvalue and the operand
+            const firstValue = parseFloat(document.getElementById("txtFirst").value)
+            const secondValue = parseFloat(document.getElementById("txtSecond").value)
+            const operand = document.getElementById("slOption").value;
+            //call the operation function with the values passed
+            const result = operation(firstValue, secondValue, operand);
+            //Display the result.
+            document.getElementById("spResult").innerText = result 
+        }
+    </script>
+</head>
+<body>
+    <h1>Calc Program</h1>
+    <hr>
+    <div class="card">
+        <p>
+            <input placeholder="Enter First Value" id="txtFirst"/>
+        </p>
+        <p>
+            Select Choice : <select id="slOption">
+                <option>+</option>
+                <option>-</option>
+                <option>*</option>
+                <option>/</option>
+            </select>
+        </p>
+        <p>
+            <input placeholder="Enter Second Value" id="txtSecond"/>
+        </p>
+        <button onclick="onClick()">=</button>
+        <p>
+            <span style="color: chocolate;" id="spResult"></span>
+        </p>
+    </div>
+</body>
+</html>

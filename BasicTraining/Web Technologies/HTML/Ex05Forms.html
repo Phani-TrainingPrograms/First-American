@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Styles/mainStyle.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Forms in HTML5</h1>
+    <nav>
+        <ul>
+            <li><a href="./Ex01BasicTags.html">Simple Tags</a></li>
+            <li><a href="./Ex02Images.html">Images Tags</a></li>
+            <li><a href="./Ex03Lists.html">Lists Tag</a></li>
+            <li><a href="./Ex04Tables.html">Tables Tag</a></li>
+            <li><a href="./Ex05Forms.html">Forms Tag</a></li>
+        </ul>
+    </nav>
+    <div>
+        <form>
+            <p><input type="text" placeholder="Enter the Name"></p>
+            <p><input type="number" placeholder="Enter the Age" min="18" max="50"></p>
+            <p><input type="email" placeholder="Enter the Email Address"></p>
+            <p>
+                Select your Qualification
+                <select>
+                    <option>School</option>
+                    <option>Pre University</option>
+                    <option>Graduate</option>
+                    <option>Post Graduate</option>
+                    <option>Research</option>
+                </select>
+            </p>           
+            <datalist id="data">
+                <option>Bangalore</option>
+                <option>New Delhi</option>
+                <option>Chandigarh</option>
+                <option>Raipur</option>
+                <option>Dispur</option>
+                <option>Dehradun</option>
+                <option>Simla</option>
+                <option>Hyderabad</option>
+                <option>Chennai</option>
+                <option>Amaravathi</option>
+                <option>Trivandrum</option>
+                <option>Panaji</option>
+                <option>Puducherry</option>
+                <option>Mumbai</option>
+                <option>GandhiNagar</option>
+                <option>Bhopal</option>
+                <option>Lucknow</option>
+                <option>Ranchi</option>
+                <option>Bhubaneswar</option>
+                <option>Calcutta</option>
+                <option>Patna</option>
+            </datalist>
+            <p><input type="text" list="data" 
+                placeholder="Select your State's capital"></p>
+            <p>Select your Interests
+                <input type="checkbox">Sports
+                <input type="checkbox">Movies
+                <input type="checkbox">Plays
+                <input type="checkbox">Books
+                <input type="checkbox">Travel
+                <input type="checkbox">Politics
+                <input type="checkbox">History
+                <input type="checkbox">Agriculture
+                <input type="checkbox">Science
+                <input type="checkbox">Painting
+            </p>
+            <p>Enter the Gender: 
+                <input type="radio" name="gender">Male
+                <input type="radio" name="gender">Female
+                <input type="radio" name="gender">Other
+            </p>
+            <p>
+                Rate yourself in HTML:
+                <input type="range" value="1" min="1" max="10" step="1">
+            </p>
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+        </form>
+    </div>
+</body>
+</html>

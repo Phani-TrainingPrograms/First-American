@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mainStyle.css">
+    <script src="Classes.js"></script>
+    <script>
+        const store = new BookStore();
+        store.addNewBook(new Book(111, 'Ramayan', 450, 'Shri Valmiki'));
+        store.addNewBook(new Book(112, 'Mahabharatha', 650, 'Shri Vyasa'));
+        store.addNewBook(new Book(113, 'The Virtues of the Human Mind', 1450, 'Sravan Kumar'));
+        store.addNewBook(new Book(114, 'Romeo And Juliet', 250, 'W. Shakespeare'));
+        function showDetails(id){
+            let item = store.getAllBooks().find((b)=>b.bookId == id);
+            $("txtId").value = item.bookId;
+            $("txtTitle").value = item.bookTitle;
+            $("txtPrice").value = item.price;
+            $("txtAuthor").value = item.author;
+        }
+        function onShowAll(){
+            const tbl = document.querySelector("table");
+            const data = store.getAllBooks();
+            tbl.innerHTML = `<tr>
+                    <th>Book Id</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Options</th>
+                </tr>`;
+            for(const item of data){
+                const row = `<tr><td>${item.bookId}</td><td>${item.bookTitle}</td><td>${item.price}</td><td><a href="#" onclick="showDetails('${item.bookId}')">Details</a></td></tr>`;
+                tbl.innerHTML += row;
+            }    
+        }
+
+        function onUpdateFunc(){
+            const book = {};
+            book.bookId = $("txtId").value;
+            book.bookTitle = $("txtTitle").value;
+            book.price = $("txtPrice").value;
+            book.author = $("txtAuthor").value;
+            store.updateBook(book);
+        }
+
+        function init(){
+            $("aShow").addEventListener("click",onShowAll);
+            $("aAdd").addEventListener("click",()=>{});
+            $("btnUpdate").addEventListener("click", onUpdateFunc);
+        }
+        window.addEventListener("load", init);
+    </script>
+    <title>BookStore App</title>
+</head>
+<body>
+    <h1>BookStore App</h1>
+    <hr>
+    <div class="menu">
+        <nav>
+            <ul>
+                <li><a href="#" id="aShow">Show All</a></li>
+                <li><a href="#" id="aAdd">Add New</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div style="display:inline-block; width: 85%;">
+        <div class="card">
+            <h2>List of Books with Us!!!</h2>
+            <hr>
+            <table border="1" style="width: 100%;">
+                <tr>
+                    <th>Book Id</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Options</th>
+                </tr>
+            </table>
+        </div>
+        <div class="card">
+            <h2>Update Book</h2>
+            <input id="txtId" disabled/>
+            <input id="txtTitle"/>
+            <input id="txtAuthor"/>
+            <input id="txtPrice"/><br/>
+            <button id="btnUpdate">Update</button>
+            <hr>
+        </div>
+        <div class="card">
+            <h2>Add new Book</h2>
+            <hr>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
