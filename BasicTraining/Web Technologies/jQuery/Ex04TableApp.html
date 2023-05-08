@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mainStyle.css">
+    <script src="jquery.min.js"></script>
+    <script src="employee.js"></script>
+    <script>
+        const empList = new EmployeeRepo();//global object that is used across the functions.
+        function addEmployees(){
+            empList.addNewEmployee(new Employee(111, "Phaniraj", "Bangalore", 56000));
+            empList.addNewEmployee(new Employee(112, "NavDeep", "Chandigarh", 65000));
+            empList.addNewEmployee(new Employee(113, "Shivani", "Punjab", 46000));
+            empList.addNewEmployee(new Employee(114, "Shivam", "Nagpur", 60000));
+        } 
+
+        function getEmployee(id){
+            $(".card:eq(2)").show(2000).siblings(".card").hide(1000);
+            const rec = empList.findEmployee(id);
+            $(".card").children("input:first").val(rec.empId);
+            $(".card").children("input:eq(1)").val(rec.empName);
+            $(".card").children("input:eq(2)").val(rec.empAddress);
+            $(".card").children("input:eq(3)").val(rec.empSalary);
+            $(".card > button").click(function(){
+                const emp = new Employee();
+                emp.empId = parseInt($(this).siblings("input:eq(0)").val());
+                emp.empName = $(this).siblings("input:eq(1)").val();
+                emp.empAddress = $(this).siblings("input:eq(2)").val();
+                emp.empSalary = parseInt($(this).siblings("input:eq(3)").val());
+                //Call the Update func of the EmpList and pass the EmpOBject as Arg.
+                empList.updateEmployee(emp);
+                alert("Employee updated")
+                $(".card").hide(2000);
+            })
+        }
+        function populateData(){
+            const empRecords = empList.getAllEmployees();
+            $("table").find("tr:gt(0)").remove();
+            $.each(empRecords, (index, emp)=>{
+                const row = `<tr>
+                                <td>${emp.empId}</td>
+                                <td>${emp.empName}</td>
+                                <td>${emp.empAddress}</td>
+                                <td>${emp.empSalary}</td>
+                                <td><a href="#" onclick="getEmployee(${emp.empId})">Edit</a></td>
+                            </tr>`
+                $("table").append(row);            
+            })
+        }
+        function init(){
+            $(".card").hide(2000);//Using class, we will hide the elements.
+            $("a:first").click(()=> {
+                $(".card:first").show(2000).siblings(".card").hide(2000);
+                if(empList.data.length == 0) 
+                    addEmployees();
+                populateData();    
+            }); 
+            $("a:eq(1)").click(()=> {
+                $(".card:eq(1)").show(2000).siblings(".card").hide(2000); 
+            });
+            $("a:last").click(()=> {
+                $(".card:last").show(2000).siblings(".card").hide(2000); 
+            });
+        }
+        $().ready(init);
+    </script>
+    <title>Database App</title>
+</head>
+<body>
+    <nav>
+        <li><a href="#">Show All</a></li>
+        <li><a href="#">Add New</a></li>
+        <li><a href="#">Delete</a></li>       
+    </nav>
+    <div class="card">
+        <h2>List of All Employees</h2>
+        <table border="1">
+            <tr>
+                <th>Emp Id</th>
+                <th>Emp Name</th>
+                <th>Emp Address</th>
+                <th>Emp Salary</th>
+                <th>Options</th>
+            </tr>
+        </table>
+    </div>
+    <div class="card">
+        <h2>Add New Record</h2>
+    </div>
+    <div class="card">
+        <h2>Edit Employee</h2>
+        <hr>
+        <input placeholder="Id" disabled/><br>
+        <input placeholder="Name"/><br>
+        <input placeholder="Address"/><br>
+        <input placeholder="Salary"/><br>
+        <button>Save Changes</button>
+    </div>
+    <div class="card">
+        <h2>Delete Record</h2>
+    </div>
+</body>
+</html>

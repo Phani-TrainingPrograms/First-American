@@ -1,0 +1,57 @@
+div{
+    width: 25%;
+    height: 200px;
+    background-color: aqua;
+    color : darkblue;
+    margin: 5px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+input{
+    width: 95%;
+    display: block;
+    border-radius: 5px;
+    margin: 5px;
+}
+button{
+    background-color: lightcoral;
+    color: yellow;
+    border: 2px solid red;
+    margin-left: 10px;
+}
+
+.question{
+    display: block;
+    background-color: bisque;
+    color:brown;
+    font-size: 18pt;
+    font-weight: bolder;
+    width: 100%;
+    height: auto;
+}
+
+.answer{
+    display: block;
+    background-color: burlywood;
+    color : blueviolet;
+    width: 100%;
+    height: auto;
+}
+
+.marks{
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: burlywood;
+    color : blueviolet;
+    font-style: italic;
+}
+
+.card{
+    display: inline-block;
+    width: 45%;
+    height: 400px;
+    box-shadow: 5px 5px 5px lightgrey; 
+    overflow: scroll;   
+}

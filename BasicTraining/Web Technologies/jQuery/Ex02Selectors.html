@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mainStyle.css">
+    <script src="jquery.min.js"></script>
+    <script>
+        function selectionByTagName() {
+            $("h2").css("background-color", "yellow");
+            $("div").click(function(){
+                $(this).hide(2000);//Hides the element within 2 seconds....
+            })
+        }
+
+        function selectionById() {
+            const name = $("#txtName").val();
+            const email = $("#txtEmail").val();
+            const phone = $("#txtPhone").val();
+            const display = `The Name: ${name}<br/>The Email: ${email}<br/>The Contact No: ${phone}`;
+            $("#pDisplay").html(display);
+        }
+
+        function selectionByClassName(){
+            $(".question > p").text("What is the main feature of jQuery");
+            $(".answer > p").text("jQuery helps in writing less code and get more feature from it");
+            $(".marks").text("Total Marks : 1");
+        }
+
+        $().ready(function(){
+            //selectionByTagName();    
+            $("button").click(selectionById);
+            selectionByClassName();
+        })
+    </script>
+    <title>selectors</title>
+</head>
+<body>
+    <h2>Selectors Example</h2>
+    <hr>
+    <section>
+        <div>Div 1</div>
+        <div>Div 2</div>
+        <div>Div 3</div>
+    </section>
+    <section>
+        <h2>Selection By ID Example</h2>
+        <div>
+            <input type="text" id="txtName" placeholder="Name please"><br>
+            <input type="text" id="txtEmail" placeholder="Email please"><br>
+            <input type="text" id="txtPhone" placeholder="Phone please"><br>
+            <button>Show Details</button>
+        </div>
+        <div>
+            <h2>Details of the Inputs</h2>
+            <hr>
+            <p id="pDisplay"></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Selection By ClassName</h2>
+        <div class="question">
+            <p>Enter the Name of the Question</p>
+        </div>
+        <div class="answer">
+            <p>The Answer is _______</p>
+        </div>
+        <div class="marks">
+            Total Marks is 2
+        </div>    
+    </section>
+</body>
+</html>

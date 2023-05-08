@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <link rel="stylesheet" href="mainStyle.css">
+    <script src="jquery.min.js"></script>
+    <script>
+        function init(){
+            $("a:eq(0)").click(function(){
+                $("div:first").hide(2000)
+                .show(2000);
+            })
+            $("a:eq(1)").click(function(){
+                $("div:first").next().fadeOut(2000).fadeIn(2000);
+            })
+            $("p").click(function(){
+                $("div:last").slideUp(2000).slideDown(2000);
+            })
+        }
+        $().ready(init);
+    </script>
+</head>
+<body>
+    <h2>Animations in jQuery</h2>
+    <nav>
+        <ul>
+            <li><a href="#">Hide</a></li>
+            <li><a href="#">Fade</a></li>
+            <li><a href="#">Add New</a></li>
+            <li><a href="#">Remove</a></li>
+        </ul>
+    </nav>
+    <div>
+        <h2>Using show and Hide</h2>
+    </div>
+    <div>
+        <h2>Using Fade In and Fade Out</h2>
+    </div>
+    <p>Sliding Feature</p>
+    <div>
+        <h2>Using Sliding</h2>
+    </div>  
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <script src="employee.js"></script>
+    <title>Document</title>
+    <script>
+        window.addEventListener("load", function(){
+            document.querySelector("button").addEventListener("click", function(){
+                const id = document.getElementById("txtId").value;
+                const name = document.getElementById("txtName").value;
+                const address = document.getElementById("txtAddress").value;
+
+                const emp = new Employee(id, name, address, 50000);
+
+                //localStorage stores only string
+                const stringData = JSON.stringify(emp);
+                localStorage.setItem("myEmpDetails", stringData);
+                alert("Emp info is stored")  
+            })
+
+            document.getElementById("btnGet").addEventListener("click", function(){
+                const jsonData = localStorage.getItem("myEmpDetails");
+                const emp = JSON.parse(jsonData);
+                alert(emp.empName)
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Employee Registration</h1>
+        <p>
+            Enter the Id: <input id="txtId"/>
+        </p>
+        <p>
+            Enter the Name: <input id="txtName"/>
+        </p>
+        <p>
+            Enter the Address: <input id="txtAddress"/>
+        </p>
+        <button>Save</button>
+    </div>
+    <div>
+        <button id="btnGet">Get</button>
+    </div>
+</body>
+</html>
