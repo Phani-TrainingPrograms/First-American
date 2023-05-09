@@ -1,0 +1,177 @@
+What is .NET Framework?
+How .NET provides language independency?
+Architecture of .NET Environment
+Execution process of .NET Application
+Tools of .NET Environment like ILDASM.Exe
+What are different kinds of Apps that U can develop with .NET
+What is the role of C# in .NET app development?
+What are the features of C# language?
+How to use VS 2019 to create .NET App using C# language?
+What is the difference b/w the .NET Framework and .NET Core?
+How to develop a Hello World Program in C# using VS 2019?
+What do these keywords mean: Main, string[] args, static, class, namespace in a C# Application?
+What does Console.WriteLine and Console.ReadLine do in a .NET Application?
+
+Data Types:
+What do you mean by Common Type System?
+What are different kinds of Data types supported by .NET?
+What is the meaning of Value types and Reference types?
+What are the primitive data types of .NET and their keywords in C#?
+Which is the best way to convert one type to another in .NET?
+What do U mean by check block in a .NET Program?
+What is the difference b/w Convert class and ValueType's Parse method?
+What is the Universal data type of .NET?
+What is the conversion of a value type to an object type called?
+What is implicit and explicit casting in .NET app?
+Why do you cast when U have a data stored as object?
+How to use DateTime in C# Apps?
+How to use strings and its conversions in C# Apps?
+
+Conditional Statements and loops:
+What is the purpose of a if...else statement in C#?
+What is the purpose of a switch...case statement in C#?
+What is the purpose of a do...while statement in C#?
+What is the purpose of a while loop in C#?
+What is the purpose of a for loop in C#?
+What is the purpose of a foreach loop in C#?
+
+Arrays in C#
+What kind of type is an Array in C#?
+How do U create a single dimensional Array in C#?
+How do U create a 2-D Array in C#?
+What is the meaning of Jagged Array in C#?
+How to work with Array of Strings?
+What are the limitations of Array?
+What is the use of the Array Class in C#?
+What is the difference b/w Array.CopyTo, Array.Copy and Array.Clone?
+How can we create a dynamic Array in C# where we dont know the type and size at compile time?
+
+Enums in C#
+What is the purpose of Enums in a programming world?
+What is the keyword used to create Enums in C#?
+How do we know the possible values of an Enum type in C#?
+How do we convert a user input to an Enum type in C#?
+
+Classes And Objects:
+What is the purpose of a class in a programming language?
+How to create a class in C#?
+What is the clarification on a Class and an object of a class?
+How to create a class to represent a Course of a Training Institute?
+How to create fields in a Class?
+How to create properties or Accessors in a Class?
+What is the purpose of methods in a Class?
+How can we hide data that should not be accessed by objects of the class itself?
+How to create a Repo Class to store multiple courses in a Program?
+How to create a Menu driven program that will perform CRUD operations in a C# App?
+
+Object Oriented Programming Aspects:
+What do you mean by SOLID Principles of Object Oriented Programming?
+How do we inherit one class into another in C#?
+What do you mean by base class and derived class in C#?
+What do you mean by Single Inheritance and Mutliple Inheritance in a OO Programming language?
+What happens if a derived class creates a member by the same name that is available in the derived class?
+What do you mean by Method overriding?
+What are the keywords used to implement method overriding?
+What are the rules of implementing method overriding?
+What happens if the non overridable method is reimplemented in the derived class?
+How do we achieve Runtime Polymorphism in C#?
+What are abstract classes and how can we implement them?
+What are the features of an abstract class and its methods?
+What are interfaces in OOP?
+How to create interfaces in C#?
+What is the difference b/w the Abstract class and interfaces in C#?
+What are sealed Classes and sealed methods?
+What are constructors in a OOP?
+How do we create parameterized constructors in C#?
+How can we call the base class constructor in a derived class?
+What is the use of a base keyword and this keyword in C#?
+How can we implement a Factory pattern class in C#?
+
+Generic Collections:
+What do you mean by Generic Classes?
+How can we create Generic Classes in C#?
+Can we restrict the type for a Generic class? How can we do that?
+How to create a Generic method in C#?
+Using Generic Lists, HashSets, Dictionaries in C#?
+How to implement Hashsets on Custom Data types like Entity classes?
+What is the purpose of overriding GetHashCode() and Equals Method?
+How can we implement the Repo class of Courses using List<Course>?
+Applying Runtime Polymorphism using the Factory Class.
+How can we sort the data of a List?
+How can we sort the data of a list on multiple conditions?
+Which interface needs to be implemented if an object of a class needs to be used in a foreach statement?
+What is the use of IComparable<T> and IComparer<T>?
+
+Delegates and Events:
+What is a Delegate?
+What is the syntax of delegate?
+Where do we use delegates in .NET Application ?
+How to create Events in a class?
+How to create Event handler in the consumer class(The class that wants to trigger the event).
+What is the purpose of BeginInvoke Function of a delegate object?
+How to create Async Functions without using Threads in C#?
+What is Single cast and Multi Cast Delegate?
+Try an example of a delegate and event example shared in GIT Repo.
+
+File Handling?
+How to read a Text file in C#?
+How to read a CSV File in C#? Why do we use CSV Files?
+How to create New Directory in UR Machine? 
+How to create Files in UR machine?
+How to transfer Files from one directory to another Directory?
+How to list all the files in a given directory?
+How to list all the specific files from a given directory?
+How to read, write and update files in C#?
+What is serialization in C#?
+Binary Serialization, XML Serialization. 
+How can we serialize an object of a class in C#?
+How to serialize the collection object in C#? and how to deserialize them?
+A CRUD operation on File data.(Adding new, Reading old, updating and deleting old data)
+
+Multi Threading
+What is a thread?
+How to create a new thread and invoke it in Main function?
+How to stop/pause a thread execution while its running ?
+How to run 2 threads that reads the same data?
+How to make only one thread to read the data while other threads have to wait?
+What is a Task<T>?
+How to make functions run on multiCores of the OS?
+
+ADO.NET:
+What is the Data Access Model of .NET Environment?
+What is connected Model and disconnected Model?
+What is the advantage of Connected Data Model?
+What are the classes required for Connected Model of database access?
+How to display the data of 2 columns on the Console?
+How to insert data from the inputs from the user into a database?
+How to convert the data from the database to a List<T> of objects. 
+How to convert an object of class to values for insert into database and insert it?
+How to convert a DataReader to a DataTable?
+What is the purpose of DataTable?
+What U cannot do with DataReader?
+What is disconnected Model?
+What is the advantage of Disconnected Data Model?
+What is the meaning of dataset?
+How to read the data from the database using Disconnected model?
+What is the purpose of Transactions in Data base programming?
+How to implement transactions in Connected data access model?
+
+Dll Programming?
+Why do I need a DLL in real time Apps?
+What is the purpose of dlls in real time applications?
+What project type should I select to create a Dll?
+How to create a dll in .NET?
+Can I run a dll project?If not, how to use the Classes created in Dlls?
+Can I create a non public class in Dll and call it in another Application ?
+Create a dll to perform database programming and use the dll functions in a C# Console Application?
+Use the dll in a Web Forms Application.
+
+
+  
+ 
+
+
+
+
+
+
