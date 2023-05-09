@@ -1,0 +1,26 @@
+﻿body {
+    background-color:bisque;
+    color : brown;
+    font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    font-size : 18pt;
+    margin:2px;
+}
+
+h1, h2{
+    font-size: 40pt;
+    text-align : center;
+    padding:10px;
+    background-color: burlywood;
+    color : indianred;
+    margin: 5px;
+}
+tr, td{
+    vertical-align:top;
+    padding: 5px;
+    margin:5px;
+}
+
+.childContent{
+    color : lightgray;
+    background-color:darkgreen;
+}

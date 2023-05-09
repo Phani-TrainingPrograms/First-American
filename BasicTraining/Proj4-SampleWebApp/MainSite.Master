@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainSite.master.cs" Inherits="SampleWebApp.MainSite" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <link href="Common/mainStyle.css" rel="stylesheet" />
+    <title>ASP.NET Web App Development</title>
+</head>
+<body>
+    <form runat="server">
+        <h1>Welcome to Web Site Development in ASP.NET</h1>
+        <p>
+            ASP.NET is a server side technology for developing Web Apps. It is RAD Technology. U can develop rich internet based Applications within less time and more features. It supports DB programming, Styling, Content Management, Session Management, Caching, Web based Security and other features that is required for a real time Web Application platform
+        </p>
+        <hr />
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <asp:Menu runat="server" ID="mnuMain">
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/HomePage.aspx" Text="Home" />
+                                <asp:MenuItem NavigateUrl="~/InputExample.aspx" Text="InputPage" />
+                                <asp:MenuItem NavigateUrl="~/CalcProgram.aspx" Text="Calc Program" />
+                                <asp:MenuItem NavigateUrl="" Text="ValidationPage" />
+                                <asp:MenuItem Text="Client Side State">
+                                    <asp:MenuItem Text="QueryStringPage" />
+                                    <asp:MenuItem Text="CookiesPage" />
+                                    <asp:MenuItem Text="PreviousPage" />
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Server Side State">
+                                    <asp:MenuItem Text="Session" />
+                                    <asp:MenuItem Text="Application" />
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Disconnected Model" />
+                                <asp:MenuItem Text="Page Caching" />
+                                <asp:MenuItem Text="Login Page" />
+                            </Items>
+                        </asp:Menu>
+                    </td>
+                    <td>
+                        <asp:ContentPlaceHolder ID="childContent" runat="server">
+                            <div>
+                                This part of the page will be modified in the individual Child Pages. The content is specific to the child content. This is the only area of the child page that is modifiable.
+                            </div>
+                        </asp:ContentPlaceHolder>
+                    </td>
+                    <td>
+                        <asp:AdRotator Width="100%" Height="200px" runat="server" AdvertisementFile="~/Common/Ads.xml" />
+                        <br />
+                        <asp:Calendar runat="server" Width="100%" Height="250px" BorderStyle="Double" CellSpacing="2" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="font-size: 0.8em">
+            <i>FAI Training program-<%=DateTime.Now.Year%></i>
+        </div>
+    </form>
+ </body>
+</html>
