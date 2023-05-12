@@ -42,8 +42,20 @@
 - Session is a collection object that is stored in the server where it allows to store data of any kind in it in the form of Dictionary
 - Session is created when a Request is made by the user to the Application and will remain so till the User closes or exits the Application. 
 - Every Session is identified by a unique Id called SessionId which can be stored as a cookie in the browser to retain the data even if the browser is closed.
-- Session can store any amount of data, but is not recommended to hold the data longer than its required to hold. - Session objects can be added using KEY-VALUE Pairs.  
+- Session can store any amount of data, but is not recommended to hold the data longer than its required to hold. - Session objects can be added using KEY-VALUE Pairs. They contain information specific to the user. 
+- Session object has Events like Session_OnStart and Session_OnEnd that can be used to do things when a session starts or closes. 
+- Session object is lost when any of the following situations happen:
+  - When the Browser is idle for more than the speculated interval of time(20 Min).
+  - When the user moves to another Web Site and tries to return using History Navigation. 
+  - A Programmer can abandon the Session using code. 
+  - The User accidentally closes down the browser.     
 
+### Application:
+- Application store the data similar to Session but is used for all the users. It is created when the First request is made by the First user of the Application and will remain so till the Application is shut down.
+- The Application closes down only when we shut down the server or the Application crashes.
+- Data that is to be used as long the Application survives is what is stored in the Application object. 
+- There is an sp file called **Global. asax** file that can be used to create Application objects using Application Events like Application_Start and Application_End.  
+- 
 
 
 
