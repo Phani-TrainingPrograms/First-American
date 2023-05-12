@@ -27,10 +27,16 @@
 6. What are the server side State managament techiniques?
 
 ### QueryString: 
-A text based key-value pairs of data seperated by an & and appended into the URL of the Page that U want to view is called as Querystring. 
-Forms submitted thru HTTPGET would use QueryString to send the data to the server. 
+- A text based key-value pairs of data seperated by an & and appended into the URL of the Page that U want to view is called as Querystring. 
+- Forms submitted thru HTTPGET would use QueryString to send the data to the server. 
+- QueryString data is obtained using the Request object of the Page class.
+- Limitations are: Querystring is not safe, it can be viewed by all other users of the machine and is available in the History of the browser. Some Browsers restrict the length of the URL upto 255 charecters and it can have only Text.
 
-
+### Cookies:
+- Cookies are text based files that are stored in the Temp internet files of the browser that allows developers to store small text based data in the client machine. They are harmless and allows to store information for upto 1 Year.
+- Cookies are programmatically represented as objects of a class HTTPCOOKIE. The object allows to store single value using the Value property of the cookie object or multiple values as KEY-VALUE pairs using Values property. 
+- After the required values are set, the cookie object should be a part of the Cookies Collection of the Response object before we post or send to the server. **Cookies are set using Response object.** 
+- Cookies are extracted using the Cookies Collection of the Request object.
 
 
 
