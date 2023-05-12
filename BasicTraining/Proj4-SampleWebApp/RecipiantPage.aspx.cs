@@ -13,7 +13,7 @@ namespace SampleWebApp
         protected void Page_Load(object sender, EventArgs e)
         {
             /****************************Querystring Reading**********************************
-            //QueryString data is obtained using the Request object of the Page class. 
+            // 
             var name = Request.QueryString["Name"];
             var email = Request.QueryString["Email"];
             var dob = Request.QueryString["dob"];

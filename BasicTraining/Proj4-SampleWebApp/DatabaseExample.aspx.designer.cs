@@ -11,7 +11,7 @@ namespace SampleWebApp
 {
 
 
-    public partial class ShoppingApp
+    public partial class DatabaseExample
     {
 
         /// <summary>
@@ -24,22 +24,22 @@ namespace SampleWebApp
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// rpProducts control.
+        /// lstNames control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rpProducts;
+        protected global::System.Web.UI.WebControls.ListBox lstNames;
 
         /// <summary>
-        /// lblItemId control.
+        /// txtId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblItemId;
+        protected global::System.Web.UI.WebControls.TextBox txtId;
 
         /// <summary>
         /// txtName control.
@@ -51,21 +51,48 @@ namespace SampleWebApp
         protected global::System.Web.UI.WebControls.TextBox txtName;
 
         /// <summary>
-        /// txtPrice control.
+        /// txtPhone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrice;
+        protected global::System.Web.UI.WebControls.TextBox txtPhone;
 
         /// <summary>
-        /// dtRecent control.
+        /// txtSalary control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList dtRecent;
+        protected global::System.Web.UI.WebControls.TextBox txtSalary;
+
+        /// <summary>
+        /// btnSave control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSave;
+
+        /// <summary>
+        /// btnAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAdd;
+
+        /// <summary>
+        /// lblError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblError;
     }
 }

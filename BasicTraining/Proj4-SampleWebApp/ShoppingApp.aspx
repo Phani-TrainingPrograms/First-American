@@ -55,10 +55,34 @@
                             Product Price: <asp:TextBox runat="server" ID="txtPrice"/>
                         </p>
                         <p>
-                            <asp:Button Text="Buy Now!!!" runat="server" />
+                            <asp:Button Text="Buy Now!!!" runat="server" OnClick="Unnamed1_Click" style="margin-top: 0px" />
                         </p>
                     </div>
+                    <div>
+                         <asp:DataList  runat="server" ID="dtRecent" RepeatColumns="5">
+                        <ItemTemplate>
+                            <div>
+                                <h3><%#Eval("ProductName")%></h3>
+                                <hr />
+                                <asp:Image Width="100px" Height="100px" ImageUrl='<%#Eval("ProductImage")%>' runat="server" />
+                            </div>
+                        </ItemTemplate>
+                        <ItemStyle BorderStyle="Solid" BackColor="Yellow" ForeColor="Blue" />
+                        <AlternatingItemTemplate>
+                            <div>
+                                <h3><%#Eval("ProductName")%></h3>
+                                <hr />
+                                <asp:Image Width="100px" Height="100px" ImageUrl='<%#Eval("ProductImage")%>' runat="server" />
+                            </div>
+                        </AlternatingItemTemplate>
+                        <AlternatingItemStyle BorderStyle="Dashed" BackColor="LightBlue" ForeColor="Yellow" />
+                        <SeparatorTemplate>
+                            <hr style="color: red" />
+                        </SeparatorTemplate>
+                    </asp:DataList>
+                    </div>
                 </td>
+               
             </tr>
         </table>
     </form>

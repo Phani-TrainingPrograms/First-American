@@ -14,5 +14,11 @@ namespace SampleWebApp
         {
             Application["products"] = new ProductRepo().Products;
         }
+
+        protected void Session_Start(object sender, EventArgs e)
+        {
+            Session["recent"] = new Queue<Product>();
+            Session["cart"] = new List<Product>();
+        }
     }
 }
