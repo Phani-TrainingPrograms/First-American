@@ -70,11 +70,26 @@
     <Content Include="CalcProgram.aspx" />
     <Content Include="Common\mainStyle.css" />
     <Content Include="Common\Ads.xml" />
+    <Content Include="Cookies.aspx" />
     <Content Include="Global.asax" />
     <Content Include="HomePage.aspx" />
     <Content Include="Images\Airtel.jpg" />
+    <Content Include="Images\AmulLassiBig.jpg" />
+    <Content Include="Images\AmulTazzaMilk.jpg" />
+    <Content Include="Images\CalRedWine.jpg" />
+    <Content Include="Images\CokeLarge.jpg" />
+    <Content Include="Images\DairyMilk.jpg" />
+    <Content Include="Images\Glucose.jpg" />
     <Content Include="Images\Google.jpg" />
+    <Content Include="Images\LaysRed.jpg" />
+    <Content Include="Images\SmirnoffVodka.jpg" />
+    <Content Include="Images\SpriteLarge.jpg" />
     <Content Include="InputExample.aspx" />
+    <Content Include="PreviousPageExample.aspx" />
+    <Content Include="QueryStringPage.aspx" />
+    <Content Include="RecipiantPage.aspx" />
+    <Content Include="SessionExample.aspx" />
+    <Content Include="ShoppingApp.aspx" />
     <Content Include="Validation.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -85,6 +100,13 @@
     </Compile>
     <Compile Include="CalcProgram.aspx.designer.cs">
       <DependentUpon>CalcProgram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cookies.aspx.cs">
+      <DependentUpon>Cookies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cookies.aspx.designer.cs">
+      <DependentUpon>Cookies.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -110,7 +132,44 @@
     <Compile Include="MainSite.Master.designer.cs">
       <DependentUpon>MainSite.Master</DependentUpon>
     </Compile>
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\UserInfo.cs" />
+    <Compile Include="PreviousPageExample.aspx.cs">
+      <DependentUpon>PreviousPageExample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreviousPageExample.aspx.designer.cs">
+      <DependentUpon>PreviousPageExample.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryStringPage.aspx.cs">
+      <DependentUpon>QueryStringPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QueryStringPage.aspx.designer.cs">
+      <DependentUpon>QueryStringPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecipiantPage.aspx.cs">
+      <DependentUpon>RecipiantPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecipiantPage.aspx.designer.cs">
+      <DependentUpon>RecipiantPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SessionExample.aspx.cs">
+      <DependentUpon>SessionExample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SessionExample.aspx.designer.cs">
+      <DependentUpon>SessionExample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingApp.aspx.cs">
+      <DependentUpon>ShoppingApp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShoppingApp.aspx.designer.cs">
+      <DependentUpon>ShoppingApp.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Validation.aspx.cs">
       <DependentUpon>Validation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -131,7 +190,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

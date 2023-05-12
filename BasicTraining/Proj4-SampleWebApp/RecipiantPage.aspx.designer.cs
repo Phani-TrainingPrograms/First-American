@@ -11,34 +11,30 @@ namespace SampleWebApp
 {
 
 
-    public partial class MainSite
+    public partial class RecipiantPage
     {
 
         /// <summary>
-        /// mnuMain control.
+        /// lblDisplay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu mnuMain;
+        protected global::System.Web.UI.WebControls.Label lblDisplay;
 
         /// <summary>
-        /// childContent control.
+        /// PreviousPage property.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated property.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder childContent;
-
-        /// <summary>
-        /// calendar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calendar;
+        public new SampleWebApp.PreviousPageExample PreviousPage
+        {
+            get
+            {
+                return ((SampleWebApp.PreviousPageExample)(base.PreviousPage));
+            }
+        }
     }
 }

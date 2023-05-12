@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SampleWebApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,7 @@ namespace SampleWebApp
     {
         protected void Application_Start(object sender, EventArgs e)
         {
+            Application["products"] = new ProductRepo().Products;
         }
     }
 }

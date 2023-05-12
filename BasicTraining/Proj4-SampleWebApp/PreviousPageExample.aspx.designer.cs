@@ -11,34 +11,34 @@ namespace SampleWebApp
 {
 
 
-    public partial class MainSite
+    public partial class PreviousPageExample
     {
 
         /// <summary>
-        /// mnuMain control.
+        /// txtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu mnuMain;
+        protected global::System.Web.UI.WebControls.TextBox txtName;
 
         /// <summary>
-        /// childContent control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder childContent;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
-        /// calendar control.
+        /// txtDob control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calendar;
+        protected global::System.Web.UI.WebControls.TextBox txtDob;
     }
 }

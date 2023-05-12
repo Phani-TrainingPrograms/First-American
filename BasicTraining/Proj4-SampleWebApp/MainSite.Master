@@ -48,7 +48,9 @@
                     <td>
                         <asp:AdRotator Width="100%" Height="200px" runat="server" AdvertisementFile="~/Common/Ads.xml" />
                         <br />
-                        <asp:Calendar runat="server" Width="100%" Height="250px" BorderStyle="Double" CellSpacing="2" />
+                        <asp:Calendar ID="calendar" runat="server" Width="100%" Height="250px" BorderStyle="Double" CellSpacing="2" >
+                            <SelectedDayStyle BackColor="Red" BorderStyle="Solid" />
+                        </asp:Calendar>
                     </td>
                 </tr>
             </table>
