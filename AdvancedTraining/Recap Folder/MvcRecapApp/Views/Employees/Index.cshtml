@@ -1,0 +1,32 @@
+﻿@model List<Employee>
+<div>
+    <h1>Employee Database System</h1>
+    <hr/>
+    @if(Model.Count == 0)
+    {
+        <h2>No Records are available with Us!!!</h2>
+    }
+    else
+    {
+        <table class="table table-bordered">
+        <tr>
+            <th>Emp Id</th>
+            <th>Emp Name</th>
+            <th>Emp Email</th>
+            <th>Options</th>.
+        </tr>
+        @foreach (var emp in Model)
+        {
+            <tr>
+                <td>@emp.EmpId</td>
+                <td>@emp.EmpName</td>
+                <td>@emp.EmpEmailAddress</td>
+                <td>
+                    @Html.ActionLink("More...", "OnFind", new { id = emp.EmpId })
+                </td>
+            </tr>
+        }
+    </table>    
+    }
+    
+</div>

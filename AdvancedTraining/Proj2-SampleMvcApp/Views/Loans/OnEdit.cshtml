@@ -1,0 +1,38 @@
+﻿@model SampleMvcApp.Models.LoanApp
+@{
+    ViewData["Title"] = "OnEdit";
+}
+
+@using (Html.BeginForm())
+{
+    <div>
+        <h2>Details of the loan for Mr. @Model.Applicant</h2>
+        <hr/>
+        <p>
+            Applicant's Address : @Html.DisplayFor(m=>m.Applicant);
+            @Html.HiddenFor(m=>m.Applicant)
+        </p>
+        <p>
+            Loan Amount: @Html.DisplayFor(m=>m.AmountOfLoan);
+            @Html.HiddenFor(m=>m.AmountOfLoan)
+        </p>
+        <p>
+            Loan Type : @Html.DisplayFor(m=>m.KindOfLoan);
+            @Html.HiddenFor(m=>m.KindOfLoan)
+        </p>
+        <p>
+
+            Eligibility : @Html.CheckBoxFor(m=>m.IsEligible);
+        </p>
+        <p>
+            Reason for rejection:
+            @Html.EditorFor(m=>m.FailureDescription)
+        </p>
+    <button>Save Changes</button>
+    </div>
+    if (ViewBag.Message != null)
+    {
+        <p style="color: red">@ViewBag.Message</p>
+    }
+}
+

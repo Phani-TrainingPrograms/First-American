@@ -1,0 +1,37 @@
+﻿@model SampleMvcApp.Models.Employee[]
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AllEmployees</title>
+    <style>
+        .card{
+            display: inline-block;
+            border: 2px solid lightgreen;
+            border-radius: 5px;
+            padding:5px;
+            width:25%;
+            margin:5px;
+            box-shadow: 2px 2px 2px green
+        }
+    </style>
+</head>
+<body>
+    <h1>List of Employees with Us</h1>
+    @foreach (var emp in Model)
+    {
+        <div class="card">
+            <h2>@emp.Name</h2>
+            <p>@emp.Name</p>
+            <p>@emp.Address</p>
+            <p>@emp.Salary</p>
+            <p>@emp.MobileNo</p>
+        </div>
+    }
+</body>
+</html>

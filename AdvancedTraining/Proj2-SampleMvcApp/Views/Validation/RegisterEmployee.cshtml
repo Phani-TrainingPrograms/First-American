@@ -1,0 +1,42 @@
+﻿@using SampleMvcApp.Models.Validation;
+@model Employee
+@{
+    ViewData["Title"] = "RegisterEmployee";
+}
+
+<h2>@ViewData["Title"]</h2>
+<hr/>
+<div>
+    @using (Html.BeginForm())
+    {
+        <div>
+            <p>EmpID: @Html.EditorFor(m => m.EmpId)
+                <span class="text-danger">
+                    @Html.ValidationMessageFor(m=>m.EmpId)
+                </span>
+            </p>
+            <p>EmpName: @Html.EditorFor(m => m.EmpName)
+                <span class="text-danger">
+                    @Html.ValidationMessageFor(m=>m.EmpName)
+                </span>
+            </p>
+            <p>
+                Email Address: @Html.EditorFor(m => m.EmailAddress)
+                <span class="text-danger">
+                    @Html.ValidationMessageFor(m=>m.EmailAddress)
+                </span>
+            </p>
+            <p>
+                <button class="btn btn-success">Post Data</button>
+            </p>
+        </div>
+    }
+    @if(ViewBag.Success != null)
+    {
+        <p class="text-success">@ViewBag.Success</p>
+    }
+    else if (ViewBag.ErrorMessage != null)
+    {
+        <p class="text-danger">@ViewBag.ErrorMessage</p>
+    }
+</div>

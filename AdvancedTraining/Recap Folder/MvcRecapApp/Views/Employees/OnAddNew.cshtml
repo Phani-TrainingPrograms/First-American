@@ -1,0 +1,18 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "OnAddNew";
+}
+
+<h1>Employee Registration</h1>
+<hr/>
+@using (Html.BeginForm())
+{
+    <div>
+        <p>Employee Name: @Html.EditorFor(m=>m.EmpName)</p>
+        <p>Employee Email: @Html.EditorFor(m=>m.EmpEmailAddress)</p>
+        <p>Employee Salary: @Html.EditorFor(m=>m.EmpSalary)</p>
+        <p>
+            <button>Add Employee</button>
+        </p>
+    </div>
+}

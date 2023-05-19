@@ -1,0 +1,32 @@
+﻿
+<h2>Employee Manager Dashboard</h2>
+<nav>
+    <button class="btn btn-primary" id="btnAll">Display All</button>
+    <button class="btn btn-secondary" id="btnAdd">Register New</button>
+</nav>
+<div id="divArea">
+    
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function(){
+            $("#btnAll").click(function(){
+                const url = "DBFirst/AllEmployees";
+                $.get(url, (view)=>{
+                    $("#divArea").empty();
+                    $("#divArea").html(view);
+                });
+            })
+
+            $("#btnAdd").click(function(){
+                const url = "DbFirst/AddNew";
+                $.get(url, (view)=>{
+                    $("#divArea").empty();
+                    $("#divArea").html(view);
+                })
+            })
+        });
+    </script>
+}
+

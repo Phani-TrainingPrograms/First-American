@@ -1,0 +1,20 @@
+﻿@model SampleMvcApp.Data.TblEmployee
+
+<h4>TblEmployee</h4>
+<hr />
+@using (Html.BeginForm())
+{
+ 
+    <div>
+        <p>EmpName: @Html.EditorFor(m=>m.EmpName)</p>
+        <p>EmpPhone: @Html.EditorFor(m=>m.EmpPhone)</p>
+        <p>EmpSalary: @Html.EditorFor(m=>m.EmpSalary)</p>
+        <p>DeptId: @Html.EditorFor(m=>m.DeptId)</p>
+        <p>CityID : @Html.EditorFor(m=>m.CityId)</p>
+        <p><button>Save</button></p>
+    </div>
+}
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

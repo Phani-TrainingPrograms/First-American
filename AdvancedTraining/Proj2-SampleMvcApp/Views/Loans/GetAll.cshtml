@@ -1,0 +1,41 @@
+﻿@model List<SampleMvcApp.Models.LoanApp>
+
+<h1>List of Current Applications</h1>
+<div>
+    <nav>
+        @Html.ActionLink("Apply Loan", "OnAddNew")
+    </nav>
+</div>
+<hr/>
+
+<div>
+    @if (Model.Count > 0)
+    {
+            <table border="1">
+                <tr>
+                    <th>EntryId</th>
+                    <th>Name</th>
+                    <th>Contact Address</th>
+                    <th>Loan Amount</th>
+                <th>Loan Type</th>
+                <th>Options</th>
+                </tr>
+            @foreach (var loan in Model)
+            {
+                        <tr>
+                            <td>@loan.Id</td>
+                            <td>@loan.Applicant</td>
+                            <td>@loan.Address</td>
+                            <td>@loan.AmountOfLoan</td>
+                            <td>@loan.KindOfLoan</td>
+                            <td>@Html.ActionLink("Process", "OnEdit", new{ id = loan.Id})</td>
+                        </tr>
+            }
+            </table>
+    }
+    else
+    {
+            <p>No Applications are available with us currently</p>
+    }
+</div>
+

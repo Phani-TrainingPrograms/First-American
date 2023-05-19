@@ -1,0 +1,41 @@
+﻿@model SampleMvcApp.Models.LoanApp
+@{
+    var data = ViewBag.LoanType as Array;
+    List<SelectListItem> items = new List<SelectListItem>();
+    if (data != null)
+    {
+        foreach (var type in data)
+        {
+            items.Add(new SelectListItem { Text = type.ToString() });
+        }
+    }
+}
+
+<h2>Application for New Loan</h2>
+<hr />
+@using (Html.BeginForm())
+{
+    <div>
+        <p>
+            Enter the Name :
+            @Html.EditorFor(m=>m.Applicant)
+        </p>
+        <p>
+            @Html.LabelFor(m=>m.Address)
+            @Html.EditorFor(m=>m.Address)
+        </p>
+        <p>
+            @Html.LabelFor(m=>m.AmountOfLoan)
+            @Html.EditorFor(m=>m.AmountOfLoan)
+        </p>
+        <p>
+            @Html.LabelFor(m=>m.KindOfLoan)
+            @Html.DropDownListFor(m =>m.KindOfLoan, items)
+        </p>
+        <button>Apply</button>
+    </div>
+    if (ViewBag.ErrorMessage != null)
+    {
+        <p style="color:red">@ViewBag.ErrorMessage</p>
+    }
+}
