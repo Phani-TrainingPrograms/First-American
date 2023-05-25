@@ -1,0 +1,23 @@
+<h1>My First Angular Component as {{title}}</h1>
+<hr>
+<p>This app is developed by {{developer}}</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Employee Details</h2>
+      <hr>
+      <p>This is an example for Property Binding in Angular</p>
+      <input class="form-control" [value]="empId"/>
+      <input class="form-control" [value]="empName"/>
+      <input class="form-control" [value]="empAddress"/>
+    </div>
+    <div class="col-md-5">
+      <img [src]="imgLoc" style="width: 95%;"/>
+    </div>
+  </div>
+</div>
+
+<button class="btn btn-danger" (click)="onClick()">Click Me</button>
+<div>
+  <app-employee></app-employee>
+</div>   

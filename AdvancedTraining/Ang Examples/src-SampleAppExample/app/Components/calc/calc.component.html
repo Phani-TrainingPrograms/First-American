@@ -1,0 +1,30 @@
+<h1 class="h1 text-danger">My Calc App</h1>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <p>
+                Enter the First Value:
+                <input [(ngModel)]="firstValue" class="form-control" type="number" placeholder="">
+            </p>
+            <p>
+                Enter the Second Value:
+                <input class="form-control"[(ngModel)]="secondValue" type="number" placeholder="">
+            </p>
+            <p>
+                Select the Choice:
+                <select class="form-control" [(ngModel)]="operand">
+                    <option>Select one</option>
+                    <option>Add</option>
+                    <option>Subtract</option>
+                    <option>Multiply</option>
+                    <option>Divide</option>
+                </select>
+            </p>
+            <p>
+                <button (click)="processCalc()" class="btn btn-primary">Result</button>
+            </p>
+            <p>{{result}}</p>
+        </div>
+    </div>
+</div>

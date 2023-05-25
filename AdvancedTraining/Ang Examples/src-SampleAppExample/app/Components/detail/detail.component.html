@@ -1,0 +1,12 @@
+<div *ngIf="selectedEmp.name" class="col-md-10">
+    <h2>Details of Mr.{{selectedEmp.name}}</h2>
+    <hr>
+    <input type="text" class="form-control" [(ngModel)]="selectedEmp.id" disabled>
+    <input type="text" class="form-control" [(ngModel)]="selectedEmp.name">
+    <input type="text" class="form-control" [(ngModel)]="selectedEmp.address">
+    <input type="text" class="form-control" [(ngModel)]="selectedEmp.phone">
+    <button class="btn btn-primary" (click)="onBtnClicked()">
+        <i class="fa fa-save"  aria-hidden="true"></i>
+        Save Changes
+    </button>
+</div>

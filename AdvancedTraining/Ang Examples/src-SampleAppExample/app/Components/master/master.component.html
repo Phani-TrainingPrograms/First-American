@@ -1,0 +1,30 @@
+<h1>List of Employees with us</h1>
+<hr>
+<div class="container">
+    <input type="search" [(ngModel)]="searchByName" class="form-control my-3" placeholder="Search Employee"/>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div *ngFor="let emp of empList | filter : searchByName" class="card col-md-4">
+                    <div class="col-md-10">
+                        <img src="{{emp.picture}}" width="50px" height="70px" alt="Image">
+                    </div>
+                    <div class="col-md-10">
+                        <h4>{{emp.name}}</h4>
+                        <hr>
+                        <p>{{emp.address | uppercase}}</p>
+                        <p>{{emp.phone | currency : 'INR'}}</p>
+                        <button (click)="onSelect(emp)" class="btn btn-secondary my-3">
+                            <i class="fa fa-pencil-square" aria-hidden="true"></i>
+                            Select
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-md-6">
+            <app-detail (onUpdate)="onDataChanged($event)"  [selectedEmp]="selectedEmp"></app-detail>
+        </div>
+    </div>
+</div>

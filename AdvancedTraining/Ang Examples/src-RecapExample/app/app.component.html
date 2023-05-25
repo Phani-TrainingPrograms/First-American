@@ -1,0 +1,15 @@
+<h1>{{title}}</h1>
+<hr>
+<div>
+  <p>Testing Angular Components</p>
+  <p>Developed by the Team of <b>{{developedBy}}</b></p>
+  <p>
+    <button (click)="onClickButton()">{{msg}}</button>
+  </p>
+  <p class="block" *ngIf="showMe">
+    Make me Visible or Invisible
+  </p>
+</div>
+<div>
+  <i style="font-style: italic;">{{footerText}}</i>
+</div>

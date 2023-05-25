@@ -1,0 +1,11 @@
+h1{
+    color : chocolate;
+    font-size: 40pt;
+    text-align: center;
+}
+
+.block{
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+}
