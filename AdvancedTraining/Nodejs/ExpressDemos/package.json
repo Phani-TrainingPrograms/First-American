@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "msnodesqlv8": "^4.1.0",
+    "mssql": "^9.1.1"
+  },
+  "name": "expressdemos",
+  "description": "1. Create a new folder called ExpressDemos. \r 2. Open the folder from the Terminal(Cmd).\r 3. Run the following command to install Express package in ur directory\r ```\r npm install express\r ```\r 4. Create a new File called Ex01-Basics.js and call the APIs to make UR app.",
+  "version": "1.0.0",
+  "main": "Ex01-Basics.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

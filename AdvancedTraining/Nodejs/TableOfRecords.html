@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script>
+        $().ready(()=>{
+            $.get("EmpData", (data)=>{
+                const empData = JSON.parse(data);
+                $.each(empData, (index, value)=>{
+                    const row = `<tr>
+                    <td>${value.id}</td>
+                    <td>${value.empName}</td>
+                    <td>${value.empAddress}</td>
+                    </tr>`
+                    $("table").append(row)
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>Table of records</h1>
+    <hr>
+    <table border="1">
+        <tr>
+            <th>EmpID</th>
+            <th>EmpName</th>
+            <th>EmpAddress</th>
+        </tr>
+    </table>
+</body>
+</html>
