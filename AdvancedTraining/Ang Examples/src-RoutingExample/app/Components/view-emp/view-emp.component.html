@@ -1,0 +1,16 @@
+{{selectedEmp | json}}
+<div class="card">
+    <div class="card-header">
+        <h2>{{selectedEmp.empName | uppercase}}</h2>
+    </div>
+    <div class="card-body">
+        <div class="row align-items-center">
+            <div class="col-sm-4">
+                <img [src]="selectedEmp.empImage" />
+            </div>
+            <div class="col-sm-5">
+                <input type="text" class="form-control my-4" [value]="selectedEmp.id" />
+                <input type="text" class="form-control my-4" [value]="selectedEmp.empSalary" />
+            </div>
+
+<button class="btn btn-danger" routerLink="/">Back</button>
