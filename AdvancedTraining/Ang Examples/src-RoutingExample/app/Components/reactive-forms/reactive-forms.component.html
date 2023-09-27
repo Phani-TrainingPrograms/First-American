@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row">
+        <h1>{{title}}</h1>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <form [formGroup] ="empForm" (ngSubmit)="onSubmit()">
+                     <div>
+                        <label for="id">Enter the Id</label>
+                        <input type="number" name="id" class="form-control" formControlName="id">
+                        <div *ngIf="(id?.invalid && id?.touched || id?.dirty)">
+                            <span class="err" *ngIf="id?.errors?.['required']">ID is mandatory</span>
+                            <span class="err" *ngIf="id?.errors?.['min']">ID should be greater than 114</span>
+                            <span class="err" *ngIf="id?.errors?.['max']">ID should be lesser than 201</span>
+                        </div> 
+                     </div>
+                     <div>
+                        <label for="name">Enter the Name</label>
+                        <input type="text" name="name" class="form-control" formControlName="name">
+                        <div *ngIf="(name?.invalid && name?.touched || name?.dirty)">
+                            <span class="err" *ngIf="name?.errors?.['required']">Name is mandatory</span>
+                            <span class="err" *ngIf="name?.errors?.['minlength']">Name should be min of 5 charecters</span>
+                        </div> 
+                     </div>
+                     <div>
+                        <label for="address">Enter the address</label>
+                        <input type="text" name="address" class="form-control" formControlName="address">
+                        <div *ngIf="(address?.invalid && address?.touched || address?.dirty)">
+                            <span class="err" *ngIf="address?.errors?.['required']">Address is mandatory</span>
+                        </div> 
+                     </div>
+                     <div>
+                        <label for="salary">Enter the Salary</label>
+                        <input type="text" name="salary" class="form-control" formControlName="salary">
+                        <div *ngIf="(salary?.invalid && salary?.touched || address?.dirty)">
+                            <span class="err" *ngIf="salary?.errors?.['required']">Salary is mandatory</span>
+                            <span class="err" *ngIf="salary?.errors?.['min']">Salary should be more than 50K</span>
+                            <span class="err" *ngIf="salary?.errors?.['max']">Salary should be less than 1 Lakh</span>
+                        </div> 
+                     </div>
+                     <div>
+                        <label for="image">Enter the image</label>
+                        <input type="text" name="image" class="form-control" formControlName="image">
+                        <div *ngIf="(image?.invalid && image?.touched || image?.dirty)">
+                            <span class="err" *ngIf="image?.errors?.['required']">Image file is mandatory</span>
+                        </div> 
+                     </div>
+                     <div class="row">
+                        <div class="col-md-4">
+                            <button [disabled]="this.empForm.invalid">Save</button>
+                        </div>
+                     </div>   
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<h2>Template driven Validation</h2>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form #empForm = "ngForm" (ngSubmit)="onSubmit(empForm)">
+                <div>
+                    <label for="id">Emp Id</label>
+                    <input type="number" class="form-control" #id="ngModel" name="id" required [(ngModel)]="emp.id" min="115" max="200"/>
+                    <p *ngIf="!id.valid && (id?.dirty || id?.touched)">
+                        <span class="err" *ngIf="id.errors?.['required']">
+                            Id is Mandatory
+                        </span> 
+                        <span class="err" *ngIf="id.errors?.['max']">
+                            ID should be less than 200
+                        </span> 
+                        <span class="err" *ngIf="id.errors?.['min']">
+                            ID should be more than 115
+                        </span> 
+                    </p>
+                </div>
+                <div>
+                    <label for="empName">Emp Name</label>
+                    <input type="text" class="form-control" #empName="ngModel" name="empName" required [(ngModel)]="emp.empName"/>
+                    <p *ngIf="!empName.valid">
+                        <span class="err">Name is mandatory</span>
+                    </p>
+                </div>
+                <div>
+                    <label for="address">Emp Address</label>
+                    <input type="text" class="form-control" #address="ngModel" name="address" required [(ngModel)]="emp.empAddress"/>
+                    <p *ngIf="!address.valid">
+                        <span class="err">Address is mandatory</span>
+                    </p>
+                </div>
+                <div>
+                    <label for="salary">Emp Salary</label>
+                    <input type="number" class="form-control" #salary="ngModel" name="salary" min="50000" max="100000" [(ngModel)]="emp.empSalary"/>
+                    <p *ngIf="!salary.valid">
+                        <span class="err">Salary should be b/w 50K to 1 Lakh</span>
+                    </p>
+                </div>
+                <div>
+                    <label for="img">Emp Image</label>
+                    <input type="text" class="form-control" #img="ngModel" name="img" required [(ngModel)]="emp.empImage"/>
+                    <p *ngIf="!img.valid">
+                        <span class="err">Image File is mandatory</span>
+                    </p>
+                </div>
+                <div>
+                    <button [disabled]="!empForm.valid" class="btn btn-warning m-3">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
